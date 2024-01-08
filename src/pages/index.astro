@@ -2,6 +2,7 @@
 // Component Imports
 import Header from '../components/Header.astro';
 import Button from '../components/Button.astro';
+import BaseHead from '../components/BaseHead.astro';
 
 import { SITE_TITLE } from '../consts.ts';
 
@@ -11,10 +12,7 @@ import { SITE_TITLE } from '../consts.ts';
 
 <html lang="en">
 	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/x-icon" href="/favicon.ico" />
-		<meta name="generator" content={Astro.generator} />
+		<BaseHead />
 		<title>{SITE_TITLE}</title>
 	</head>
 
