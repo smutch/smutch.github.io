@@ -7,6 +7,9 @@ module.exports = {
 			fontFamily: {
 				sans: ['Inter var', ...defaultTheme.fontFamily.sans],
 			},
+			height: {
+				custom: 'calc(100vh - var(--header-height))',
+			},
 		},
 	},
 	plugins: [],

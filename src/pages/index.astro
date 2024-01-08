@@ -1,10 +1,9 @@
 ---
 // Component Imports
-import Header from '../components/Header.astro';
-import Button from '../components/Button.astro';
-import BaseHead from '../components/BaseHead.astro';
+import Header from "../components/Header.astro";
+import BaseHead from "../components/BaseHead.astro";
 
-import { SITE_TITLE } from '../consts.ts';
+import { SITE_TITLE } from "../consts.ts";
 
 // Full Astro Component Syntax:
 // https://docs.astro.build/core-concepts/astro-components/
@@ -17,10 +16,24 @@ import { SITE_TITLE } from '../consts.ts';
 	</head>
 
 	<body>
-		<Header />
-		<div class="grid place-items-center h-screen content-center">
-			<Button>Tailwind Button in Astro!</Button>
-			<a href="/markdown-page" class="p-4 underline">Markdown is also supported...</a>
+		<Header height="80px" />
+		<div class="relative">
+			<div
+				class="bg-cover bg-center h-custom w-full bg-fixed contrast-50 opacity-20"
+				style="background-image: url('images/banner.jpg')"
+			>
+			</div>
+			<div
+				class="absolute top-0 left-0 right-0 z-10 h-full flex items-center justify-center"
+			>
+				<div>
+					<h1 class="text-8xl text-center font-bold">Simon Mutch</h1>
+					<h2 class="text-xl text-center text-slate-800">
+						Senior Research Data Specialist and past creator of
+						Universes
+					</h2>
+				</div>
+			</div>
 		</div>
 	</body>
 </html>

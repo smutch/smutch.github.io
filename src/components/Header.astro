@@ -1,4 +1,9 @@
-<header class="bg-white">
+---
+import '../styles/global.css';
+let { height = '80px' } = Astro.props;
+---
+
+<header class="bg-white" style={`--header-height: ${height};`}>
     <nav
         class="mx-auto flex items-center justify-between p-6 px-8"
         aria-label="Global"
