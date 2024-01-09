@@ -1,7 +1,10 @@
 ---
 // Component Imports
-import Header from "../components/Header.astro";
+// import Header from "../components/Header.astro";
 import BaseHead from "../components/BaseHead.astro";
+import GithubLogo from "../components/logos/GithubLogo.astro";
+import OrcidLogo from "../components/logos/OrcidLogo.astro";
+import TwitterLogo from "../components/logos/TwitterLogo.astro";
 
 import { SITE_TITLE } from "../consts.ts";
 
@@ -16,22 +19,24 @@ import { SITE_TITLE } from "../consts.ts";
 	</head>
 
 	<body>
-		<Header height="80px" />
-		<div class="relative">
-			<div
-				class="bg-cover bg-center h-custom w-full bg-fixed contrast-50 opacity-20"
-				style="background-image: url('images/banner.jpg')"
-			>
-			</div>
-			<div
-				class="absolute top-0 left-0 right-0 z-10 h-full flex items-center justify-center"
-			>
-				<div>
-					<h1 class="text-8xl text-center font-bold">Simon Mutch</h1>
-					<h2 class="text-xl text-center text-slate-800">
-						Senior Research Data Specialist and past creator of
-						Universes
-					</h2>
+		<div
+			class="absolute top-0 left-0 right-0 z-10 h-full flex items-center justify-center"
+		>
+			<div>
+				<img
+					src="/images/favicon-image.jpg"
+					alt="Simon Mutch"
+					class="rounded-full w-32 h-32 mx-auto mb-6"
+				/>
+				<h1 class="text-8xl text-center font-bold">Simon Mutch</h1>
+				<h2 class="text-xl text-center text-slate-800">
+					Senior Research Data Specialist and past creator of
+					Universes
+				</h2>
+				<div class="mt-6 flex justify-center space-x-4">
+					<GithubLogo size="3em" link="https://github.com/smutch"/>
+					<OrcidLogo size="3em" link="https://orcid.org/0000-0002-3166-4614"/>
+					<TwitterLogo size="3em" link="https://twitter.com/t_tauri"/>
 				</div>
 			</div>
 		</div>
