@@ -1,18 +1,21 @@
 ---
-import Main from "../layouts/main.astro";
+import Main from "../layouts/Main.astro";
 ---
 
 <Main title="About">
-    <article
-        class="mx-16 h-custom flex flex-wrap items-center justify-center"
-    >
+    <article class="mx-16 h-custom flex flex-wrap items-center justify-center">
         <div class="lg:flex lg:flex-row lg:space-x-4 lg:items-center pb-8">
-            <h1 class="lg:text-6xl text-4xl font-black mb-8 lg:mb-0">
-                I'M A SENIOR RESEARCH DATA SPECIALIST AT <a
-                    href="https://www.unimelb.edu.au/"
-                    class="hover:underline">THE UNIVERSITY OF MELBOURNE</a
-                > AND PREVIOUSLY A POSTDOCTORAL RESEARCH FELLOW IN THEORETICAL ASTROPHYSICS.
-            </h1>
+            <div class="lg:text-6xl text-4xl font-black mb-8 lg:mb-0">
+                <h1 class="mb-3">
+                    I'M A SENIOR RESEARCH DATA SPECIALIST AT <a
+                        href="https://www.unimelb.edu.au/"
+                        class="hover:underline">THE UNIVERSITY OF MELBOURNE</a>.
+                </h1>
+                <h1>
+                    BEFORE THIS I SPENT 10 YEARS AS A POSTDOCTORAL RESEARCH
+                    FELLOW IN THEORETICAL ASTROPHYSICS.
+                </h1>
+            </div>
 
             <div>
                 <p class="mb-6 text-lg">
@@ -35,8 +38,8 @@ import Main from "../layouts/main.astro";
                     semi-analytic galaxy formation models (SAMs).
                 </p>
                 <p class="text-lg">
-                    To find out more about the research I've worked on over the
-                    years, check out my <a
+                    To find out more about the diverse range of research I've
+                    worked on over the years, check out my <a
                         href="/research"
                         class="hover:underline font-bold">research page</a
                     >.
