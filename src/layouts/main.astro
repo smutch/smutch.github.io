@@ -1,14 +1,16 @@
 ---
-const { content } = Astro.props;
+const { title } = Astro.props;
 import BaseHead from "../components/BaseHead.astro";
+import Header from "../components/Header.astro";
 ---
 
 <html lang="en">
 	<head>
 		<BaseHead />
-		<title>{content.title}</title>
+		<title>{title}</title>
 	</head>
 	<body>
+		<Header />
 		<slot />
 	</body>
 </html>
