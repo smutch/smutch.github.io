@@ -8,6 +8,21 @@ import TwitterLogo from "../components/logos/TwitterLogo.astro";
 
 import { SITE_TITLE } from "../consts.ts";
 
+let pages = [
+	{
+		title: "About me",
+		link: "/about",
+	},
+	{
+		title: "Research",
+		link: "#",
+	},
+	{
+		title: "Blog",
+		link: "#",
+	},
+];
+
 // Full Astro Component Syntax:
 // https://docs.astro.build/core-concepts/astro-components/
 ---
@@ -19,24 +34,57 @@ import { SITE_TITLE } from "../consts.ts";
 	</head>
 
 	<body>
-		<div
-			class="absolute top-0 left-0 right-0 z-10 h-full flex items-center justify-center"
-		>
-			<div>
-				<img
-					src="/images/favicon-image.jpg"
-					alt="Simon Mutch"
-					class="rounded-full w-32 h-32 mx-auto mb-6"
-				/>
-				<h1 class="text-8xl text-center font-bold">Simon Mutch</h1>
-				<h2 class="text-xl text-center text-slate-800">
-					Senior Research Data Specialist and past creator of
-					Universes
-				</h2>
-				<div class="mt-6 flex justify-center space-x-4">
-					<GithubLogo size="3em" link="https://github.com/smutch"/>
-					<OrcidLogo size="3em" link="https://orcid.org/0000-0002-3166-4614"/>
-					<TwitterLogo size="3em" link="https://twitter.com/t_tauri"/>
+		<div class="relative">
+			<div
+				class="bg-cover bg-center h-screen w-full bg-fixed brightness-75"
+				style="background-image: url('/images/banner.jpg')"
+			>
+			</div>
+			<div
+				class="absolute top-0 left-0 right-0 z-10 h-full flex items-center justify-center"
+			>
+				<div
+					class="backdrop-blur-xl py-16 px-32 border-solid border-2 rounded-lg"
+				>
+					<img
+						src="/images/favicon-image.jpg"
+						alt="Simon Mutch"
+						class="rounded-full w-32 h-32 mx-auto mb-6"
+					/>
+					<h1 class="text-8xl text-center font-bold text-zinc-100">
+						Simon Mutch
+					</h1>
+					<h2 class="text-xl text-center text-zinc-200">
+						Senior Research Data Specialist and past creator of
+						Universes
+					</h2>
+					<div
+						class="mt-6 flex justify-center space-x-4 text-zinc-200"
+					>
+						<GithubLogo
+							size="3em"
+							link="https://github.com/smutch"
+						/>
+						<OrcidLogo
+							size="3em"
+							link="https://orcid.org/0000-0002-3166-4614"
+						/>
+						<TwitterLogo
+							size="3em"
+							link="https://twitter.com/t_tauri"
+						/>
+					</div>
+					<div
+						class="mt-16 flex justify-center space-x-16 text-zinc-100 text-m font-semibold leading-6 underline-offset-4"
+					>
+						{
+							pages.map((p) => (
+								<a href={p.link} class="hover:underline">
+									{p.title} <span aria-hidden="true">→</span>
+								</a>
+							))
+						}
+					</div>
 				</div>
 			</div>
 		</div>
