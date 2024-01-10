@@ -6,7 +6,7 @@ import FOMButton from "../components/FOMButton.astro";
 
 <Main title="Research">
   <div class="m-8">
-    <h1 class="text-5xl font-black text-center mb-6">RESEARCH</h1>
+    <h1 class="text-6xl font-black text-center mb-6">RESEARCH</h1>
     <div class="prose mx-auto">
       <p>
         I've had the opportunity to work on a wide range of research topics over
@@ -32,8 +32,8 @@ import FOMButton from "../components/FOMButton.astro";
     </div>
 
     <div class="my-16">
-      <h1 class="text-4xl font-black text-center mb-6">ASTRONOMY</h1>
-      <div class="grid grid-cols-2 my-8 min-h-[400px]">
+      <h2 class="text-5xl font-black text-center mb-6">ASTRONOMY</h2>
+      <div class="grid grid-cols-2 my-8 min-h-[400px] overflow-hidden">
         <div
           class="w-screen bg-cover bg-no-repeat overflow-hidden"
           style="background-image: linear-gradient(to right, rgba(255,255,255,0) 10%, rgba(255,255,255,1) 50%), url('images/banner.jpg')"
@@ -41,7 +41,7 @@ import FOMButton from "../components/FOMButton.astro";
         </div>
         <div class="-ml-12 my-auto">
           <h1 class="text-2xl font-extrabold">DRAGONS</h1>
-          <p class="mb-6">
+          <p class="mb-6 tracking-tight">
             THE <b>D</b>ARK-AGES <b>R</b>EIONISATION <b>A</b>ND <b>G</b>ALAXY <b
               >O</b
             >BSERVABLES FROM <b>N</b>UMERICAL <b>S</b>IMULATIONS PROGRAMME
@@ -58,45 +58,27 @@ import FOMButton from "../components/FOMButton.astro";
         </div>
       </div>
 
-      <div class="flex">
-      <div class="flex gap-4 mx-auto w-full flex-wrap justify-center">
-        <ResearchCard
-          title="Dark-ages reionization & galaxy formation simulation VI: The origins and fate of the highest known redshift galaxy"
-          image="images/thumbs/gnz11.jpg"
-        >
-          Using Hubble data, including new grism spectra, <a
-            href="https://adsabs.harvard.edu/cgi-bin/nph-data_query?bibcode=2016ApJ...819..129O&link_type=ARTICLE"
-            >Oesch et al. (2016)</a
-          > recently identified GN-z11, a M<sub>UV</sub>=-21.1 galaxy at z=11.1
-          (just 400 Myr after the Big Bang). With an estimated stellar mass of
-          ∼10<sup>9</sup> M<sub>⊙</sub>, this galaxy is surprisingly bright and
-          massive, raising questions as to how such an extreme object could form
-          so early in the Universe. Using Meraxes, a semi-analytic galaxy
-          formation model developed as part of the Dark-ages Reionization And
-          Galaxy-formation Observables from Numerical Simulations (DRAGONS)
-          programme, we investigate the potential formation mechanisms and
-          eventual fate of GN-z11.
-        </ResearchCard>
+      <h3 class="text-3xl font-black text-center mb-6 w-full">
+        HIGHLIGHTED WORKS
+      </h3>
+      <div class="flex mx-8">
+        <div class="flex gap-8 mx-auto w-full flex-wrap justify-center">
+          <ResearchCard
+            title="Dark-ages reionization and galaxy formation simulation - XXI. Constraining the evolution of the ionizing escape fraction"
+            image="images/thumbs/meraxes.jpg"
+          />
 
-        <ResearchCard
-          title="Dark-ages reionization and galaxy formation simulation III: Modelling galaxy formation and the Epoch of Reionization"
-          image="images/thumbs/meraxes.jpg"
-        >
-          This work introduces <strong class="font-extrabold">Meraxes</strong>,
-          a new semi-analytic galaxy formation created as part of the DRAGONS
-          programme (see above). Meraxes has been specially designed for
-          investigating galaxy evolution during the Epoch of Reionisation. It
-          incorporates a consistent coupling between galaxies and a spatially
-          and temporaly varying UV ionising background. This unique tool can be
-          used to model the constraining power of future 21cm radio observations
-          on high-redshift galaxy formation as well as to test the effects of
-          different physical processes on the progression of reionisation.
-        </ResearchCard>
+          <ResearchCard
+            title="Dark-ages reionization & galaxy formation simulation VI: The origins and fate of the highest known redshift galaxy"
+            image="images/thumbs/gnz11.jpg"
+          />
 
-        <ResearchCard title="Meraxes" image="images/thumbs/meraxes.jpg">
-          Hello
-        </ResearchCard>
-      </div>
+          <ResearchCard
+            title="Dark-ages reionization and galaxy formation simulation III: Modelling galaxy formation and the Epoch of Reionization"
+            image="images/thumbs/meraxes.jpg"
+            link="papers/meraxes"
+          />
+        </div>
       </div>
     </div>
   </div>
