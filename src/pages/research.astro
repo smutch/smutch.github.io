@@ -1,28 +1,66 @@
 ---
 import Main from "../layouts/Main.astro";
+import ResearchCard from "../components/ResearchCard.astro";
+import FOMButton from "../components/FOMButton.astro";
 ---
 
 <Main title="Research">
-<div class="m-8">
-<h1 class="text-3xl lg:text-6xl font-black text-center mb-6">RESEARCH</h1>
-<div class="prose mx-auto">
-<p>I've had the opportunity to work on a wide range of research topics over my time in Academia.</p>
+  <div class="m-8">
+    <h1 class="text-5xl font-black text-center mb-6">RESEARCH</h1>
+    <div class="prose mx-auto">
+      <p>
+        I've had the opportunity to work on a wide range of research topics over
+        my time in Academia.
+      </p>
 
-<p>
-<ul class="flex flex-wrap mb-2 pl-32">
-    <li class="w-1/2 px-2"><strong>Astrophysics</strong><sup>†</sup></li>
-    <li class="w-1/2 px-2">Climate change</li>
-    <li class="w-1/2 px-2">Biosecurity</li>
-    <li class="w-1/2 px-2">Wildfires</li>
-    <li class="w-1/2 px-2">Medical text de-identification</li>
-    <li class="w-1/2 px-2">Phylogenetics</li>
-    <li class="w-1/2 px-2">Hyperspectral imaging</li>
-    <li class="w-1/2 px-2">Eye-tracking</li>
-    <li class="w-1/2 px-2">... and more!</li>
-</ul>
-<span class="text-sm pl-32"><i>†: My main research area.</i></span>
-</p>
+      <p>
+        <ul class="md:flex md:flex-wrap mb-2 md:pl-32 pl-8">
+          <li class="w-1/2 px-2"><strong>Astrophysics</strong><sup>†</sup></li>
+          <li class="w-1/2 px-2">Climate change</li>
+          <li class="w-1/2 px-2">Biosecurity</li>
+          <li class="w-1/2 px-2">Wildfires</li>
+          <li class="w-1/2 px-2">Medical records de-identification</li>
+          <li class="w-1/2 px-2">Phylogenetics</li>
+          <li class="w-1/2 px-2">Hyperspectral imaging</li>
+          <li class="w-1/2 px-2">Eye-tracking</li>
+          <li class="w-1/2 px-2">... and more!</li>
+        </ul>
+        <span class="text-sm md:pl-32 pl-8"
+          ><i>†: My main research area.</i></span
+        >
+      </p>
+    </div>
 
-</div>
-</div>
+    <div class="my-16">
+      <h1 class="text-4xl font-black text-center mb-6">ASTRONOMY</h1>
+      <div class="grid grid-cols-2 my-8">
+        <div
+          class="bg-cover bg-fixed bg-center overflow-hidden"
+          style="background-image: linear-gradient(to right, rgba(255,255,255,0) 10%, rgba(255,255,255,1) 50%), url('images/banner.jpg')"
+        >
+        </div>
+        <div class="-ml-12 prose">
+          <h1 class="text-2xl font-extrabold justify-start">DRAGONS</h1>
+          <p class="mb-6">
+            THE <b>D</b>ARK-AGES <b>R</b>EIONISATION <b>A</b>ND <b>G</b>ALAXY <b
+              >O</b
+            >BSERVABLES FROM <b>N</b>UMERICAL <b>S</b>IMULATIONS PROGRAMME
+          </p>
+          <p class="mb-6">
+            The aim of DRAGONS is to explore the formation end evolution the
+            first galaxies and, in particular, their role in the reionisation of
+            Universe. To do this we developed a new semi-analytic galaxy
+            formation model, Meraxes, which is tightly coupled with a
+            semi-numerical scheme in order to describe the growth and structure
+            of ionised regions. I was the author and lead developer of Meraxes.
+          </p>
+          <FOMButton />
+        </div>
+      </div>
+
+      <ResearchCard title="Meraxes" image="images/banner.jpg">
+        Hello
+      </ResearchCard>
+    </div>
+  </div>
 </Main>
