@@ -1,6 +1,5 @@
 ---
-import Main from "../../layouts/Main.astro";
-import PaperTitle from "../../components/PaperTitle.astro";
+import MeraxesLayout from "../../layouts/Meraxes.astro";
 
 const dataProducts = [
   { name: "stellar mass functions", link: "/papers/meraxes/smf" },
@@ -11,65 +10,49 @@ const dataProducts = [
 ];
 ---
 
-<!-- TODO: Reduce the size of the image in the header -->
-<Main title="DRAGONS-III">
-  <div class="m-8 mt-0 md:mt-8 md:px-16">
-
-    <PaperTitle
-    title="Dark-ages reionization and galaxy formation simulation III: Modelling galaxy formation and the Epoch of Reionization"
-    bgImage="/images/DRAGONS-composite_EoR-PG.jpg"
-    authors="<strong>Simon J. Mutch</strong>, Paul M. Geil, Gregory B. Poole, Paul W. Angel, Alan R. Duffy, Andrei Mesinger, J. Stuart B. Wyithe"
-    doi="10.1093/mnras/stw1506"
-    ref="2016, MNRAS, Volume 462, Issue 1, p.250-276"
-    journal="MNRAS"
-    journalLink="http://mnras.oxfordjournals.org/content/462/1/250.abstract"
-    adsLink="https://ui.adsabs.harvard.edu/#abs/2016MNRAS.462..250M/abstract"
-    arxivLink="http://arxiv.org/abs/1512.00562"
-    />
-
-    <div class="mt-16 lg:flex lg:gap-16">
-      <div class="prose">
-        <h2>Abstract</h2>
-        <p>
-          We introduce MERAXES, a new, purpose-built semi-analytic galaxy
-          formation model designed for studying galaxy growth during reionization.
-          MERAXES is the first model of its type to include a temporally and
-          spatially coupled treatment of reionization and is built upon a custom
-          (100 Mpc)<sup>3</sup> N-body simulation with high temporal and mass resolution,
-          allowing us to resolve the galaxy and star formation physics relevant to
-          early galaxy formation. Our fiducial model with supernova feedback reproduces
-          the observed optical depth to electron scattering and evolution of the galaxy
-          stellar mass function between z=5 and 7, predicting that a broad range of
-          halo masses contribute to reionization. Using a constant escape fraction
-          and global recombination rate, our model is unable to simultaneously match
-          the observed ionizing emissivity at z≲6. However, the use of an evolving
-          escape fraction of 0.05 &#8212 0.1 at z∼6, increasing towards higher redshift,
-          is able to satisfy these three constraints. We also demonstrate that photoionization
-          suppression of low-mass galaxy formation during reionization has only a small
-          effect on the ionization history of the intergalactic medium. This lack of
-          'self-regulation' arises due to the already efficient quenching of star formation
-          by supernova feedback. It is only in models with gas supply-limited star
-          formation that reionization feedback is effective at regulating galaxy growth.
-          We similarly find that reionization has only a small effect on the stellar
-          mass function, with no observationally detectable imprint at M<sub
-            >*</sub
-          >>10<sup>7.5</sup>M<sub>⊙</sub>. However, patchy reionization has
-          significant effects on individual galaxy masses, with variations of
-          factors of 2 &#8212 3 at z=5 that correlate with environment.
-        </p>
-      </div>
-      <div class="prose mt-10 lg:mt-0">
-        <h2>Data Products</h2>
-        <ul>
-          {
-            dataProducts.map((p) => (
-              <li>
-                <a href={p.link}>{p.name}</a>
-              </li>
-            ))
-          }
-        </ul>
-      </div>
+<MeraxesLayout>
+  <div class="mt-16 lg:flex lg:gap-16">
+    <div class="prose">
+      <h2>Abstract</h2>
+      <p>
+        We introduce MERAXES, a new, purpose-built semi-analytic galaxy
+        formation model designed for studying galaxy growth during reionization.
+        MERAXES is the first model of its type to include a temporally and
+        spatially coupled treatment of reionization and is built upon a custom
+        (100 Mpc)<sup>3</sup>
+        N-body simulation with high temporal and mass resolution, allowing us to
+        resolve the galaxy and star formation physics relevant to early galaxy formation.
+        Our fiducial model with supernova feedback reproduces the observed optical
+        depth to electron scattering and evolution of the galaxy stellar mass function
+        between z=5 and 7, predicting that a broad range of halo masses contribute
+        to reionization. Using a constant escape fraction and global recombination
+        rate, our model is unable to simultaneously match the observed ionizing emissivity
+        at z≲6. However, the use of an evolving escape fraction of 0.05 &#8212 0.1
+        at z∼6, increasing towards higher redshift, is able to satisfy these three
+        constraints. We also demonstrate that photoionization suppression of low-mass
+        galaxy formation during reionization has only a small effect on the ionization
+        history of the intergalactic medium. This lack of 'self-regulation' arises
+        due to the already efficient quenching of star formation by supernova feedback.
+        It is only in models with gas supply-limited star formation that reionization
+        feedback is effective at regulating galaxy growth. We similarly find that
+        reionization has only a small effect on the stellar mass function, with no
+        observationally detectable imprint at M<sub>*</sub>>10<sup>7.5</sup
+        >M<sub>⊙</sub>. However, patchy reionization has significant effects on
+        individual galaxy masses, with variations of factors of 2 &#8212 3 at
+        z=5 that correlate with environment.
+      </p>
+    </div>
+    <div class="prose mt-10 lg:mt-0">
+      <h2>Data Products</h2>
+      <ul>
+        {
+          dataProducts.map((p) => (
+            <li>
+              <a href={p.link}>{p.name}</a>
+            </li>
+          ))
+        }
+      </ul>
     </div>
   </div>
-</Main>
+</MeraxesLayout>

@@ -1,0 +1,54 @@
+---
+import MeraxesLayout from "../../../layouts/Meraxes.astro";
+import DownloadButton from "../../../components/DownloadButton.astro";
+---
+
+<MeraxesLayout>
+  <div class="prose mt-16">
+    <h2>Galaxy stellar mass functions</h2>
+    <h3>Fiducial model</h3>
+    <table class="default">
+      <thead>
+        <tr>
+          <th>Parameter</th>
+          <th>Value</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>𝛂<sub>SF</sub></td>
+          <td>0.03</td>
+        </tr>
+        <tr>
+          <td>f<sub>esc</sub></td>
+          <td>0.2</td>
+        </tr>
+        <tr>
+          <td>cosmology</td>
+          <td>Planck 2015</td>
+        </tr>
+        <tr>
+          <td>h</td>
+          <td>0.678</td>
+        </tr>
+        <tr>
+          <td>volume</td>
+          <td>100 Mpc<sup>3</sup></td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="2" style="text-align: right;"
+            >For more info see <a
+              href="http://mnras.oxfordjournals.org/content/462/1/250.abstract"
+              >the paper</a
+            >.</td
+          >
+        </tr>
+      </tfoot>
+    </table>
+    <strong>Note</strong>: Data is provided in HDF5 format with all units and
+    required information provided as attributes.
+    <DownloadButton />
+  </div>
+</MeraxesLayout>

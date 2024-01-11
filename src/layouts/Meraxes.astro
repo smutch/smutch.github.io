@@ -1,0 +1,25 @@
+---
+import Main from "../layouts/Main.astro";
+import PaperTitle from "../components/PaperTitle.astro";
+
+const { title = "DRAGONS-III" } = Astro.props;
+---
+
+<!-- TODO: Reduce the size of the image in the header -->
+<Main title={title}>
+  <div class="m-8 mt-0 md:mt-8 md:px-16">
+    <PaperTitle
+      title="Dark-ages reionization and galaxy formation simulation III: Modelling galaxy formation and the Epoch of Reionization"
+      bgImage="/images/DRAGONS-composite_EoR-PG.jpg"
+      authors="<strong>Simon J. Mutch</strong>, Paul M. Geil, Gregory B. Poole, Paul W. Angel, Alan R. Duffy, Andrei Mesinger, J. Stuart B. Wyithe"
+      doi="10.1093/mnras/stw1506"
+      ref="2016, MNRAS, Volume 462, Issue 1, p.250-276"
+      journal="MNRAS"
+      journalLink="http://mnras.oxfordjournals.org/content/462/1/250.abstract"
+      adsLink="https://ui.adsabs.harvard.edu/#abs/2016MNRAS.462..250M/abstract"
+      arxivLink="http://arxiv.org/abs/1512.00562"
+    />
+
+      <slot />
+    </div>
+</Main>
