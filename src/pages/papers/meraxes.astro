@@ -1,12 +1,19 @@
 ---
 import Main from "../../layouts/Main.astro";
+
+const dataProducts = [
+  { name: "stellar mass functions", link: "/papers/meraxes/smf" },
+  { name: "stellar mass density", link: "/papers/meraxes/smd" },
+  { name: "global neutral fraction", link: "/papers/meraxes/xhi" },
+  { name: "stellar mass fraction", link: "/papers/meraxes/fstar" },
+  { name: "filtering mass", link: "/papers/meraxes/mfilt" },
+];
 ---
 
 <!-- TODO: Reduce the size of the image in the header -->
-
 <Main title="DRAGONS-III">
-  <div class="m-8">
-    <h1 class="text-5xl px-16 font-black">
+  <div class="m-8 mt-0 md:mt-8 md:px-16">
+    <h1 class="text-5xl font-black">
       <span
         class="w-full bg-cover bg-no-repeat bg-clip-text text-transparent overflow-hidden brightness-50"
         style="background-image: url('/images/DRAGONS-composite_EoR-PG.jpg')"
@@ -15,5 +22,78 @@ import Main from "../../layouts/Main.astro";
         />Modelling galaxy formation and the Epoch of Reionization
       </span>
     </h1>
+    <h4>
+      <strong>Simon J. Mutch</strong>; Paul M. Geil; Gregory B. Poole; Paul W.
+      Angel; Alan R. Duffy; Andrei Mesinger; J. Stuart B. Wyithe
+      <br />
+      2016, MNRAS, Volume 462, Issue 1, p.250-276
+      <br />
+      <span class="text-sm">10.1093/mnras/stw1506</span>
+    </h4>
+    <div class="text-center font-bold mt-2 flex flex-row gap-2">
+      <a
+        href="http://mnras.oxfordjournals.org/content/462/1/250.abstract"
+        class="hover:text-indigo-500"
+        ><div class="grid grid-cols-1">
+          <i class="ai ai-open-access"></i><span class="text-sm">MNRAS</span>
+        </div></a
+      >
+      <a
+        href="https://ui.adsabs.harvard.edu/#abs/2016MNRAS.462..250M/abstract"
+        class="hover:text-indigo-500"
+        ><div class="grid grid-cols-1">
+          <i class="ai ai-ads"></i><span class="text-sm">ADS</span>
+        </div></a
+      >
+      <a href="http://arxiv.org/abs/1512.00562" class="hover:text-indigo-500"
+        ><div class="grid grid-cols-1">
+          <i class="ai ai-arxiv"></i><span class="text-sm">arXiv</span>
+        </div></a
+      >
+    </div>
+    <div class="mt-16 lg:flex lg:gap-16">
+      <div class="prose">
+        <h2>Abstract</h2>
+        <p>
+          We introduce MERAXES, a new, purpose-built semi-analytic galaxy
+          formation model designed for studying galaxy growth during reionization.
+          MERAXES is the first model of its type to include a temporally and
+          spatially coupled treatment of reionization and is built upon a custom
+          (100 Mpc)<sup>3</sup> N-body simulation with high temporal and mass resolution,
+          allowing us to resolve the galaxy and star formation physics relevant to
+          early galaxy formation. Our fiducial model with supernova feedback reproduces
+          the observed optical depth to electron scattering and evolution of the galaxy
+          stellar mass function between z=5 and 7, predicting that a broad range of
+          halo masses contribute to reionization. Using a constant escape fraction
+          and global recombination rate, our model is unable to simultaneously match
+          the observed ionizing emissivity at z≲6. However, the use of an evolving
+          escape fraction of 0.05 &#8212 0.1 at z∼6, increasing towards higher redshift,
+          is able to satisfy these three constraints. We also demonstrate that photoionization
+          suppression of low-mass galaxy formation during reionization has only a small
+          effect on the ionization history of the intergalactic medium. This lack of
+          'self-regulation' arises due to the already efficient quenching of star formation
+          by supernova feedback. It is only in models with gas supply-limited star
+          formation that reionization feedback is effective at regulating galaxy growth.
+          We similarly find that reionization has only a small effect on the stellar
+          mass function, with no observationally detectable imprint at M<sub
+            >*</sub
+          >>10<sup>7.5</sup>M<sub>⊙</sub>. However, patchy reionization has
+          significant effects on individual galaxy masses, with variations of
+          factors of 2 &#8212 3 at z=5 that correlate with environment.
+        </p>
+      </div>
+      <div class="prose mt-10 lg:mt-0">
+        <h2>Data Products</h2>
+        <ul>
+          {
+            dataProducts.map((p) => (
+              <li>
+                <a href={p.link}>{p.name}</a>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+    </div>
   </div>
 </Main>
