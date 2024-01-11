@@ -1,167 +1,28 @@
-<!-- https://codepen.io/astheruinfalls/pen/MWjjgvv -->
-<button
-  class="download-button transform active:scale-95 bg-blue-500 hover:bg-blue-400 text-white px-16 py-6 rounded-lg font-bold tracking-widest w-full"
+---
+const { url } = Astro.props;
+---
+
+<a
+  class="not-prose text-slate-800 font-black border-slate-700 border-2 hover:bg-indigo-200 group relative inline-flex items-center overflow-hidden rounded px-8 py-3"
+  href={url}
 >
-  <div class="flex justify-center items-center relative">
-    <div class="svg-container">
-      <!-- Download Icon -->
+  <button>
+    <div class="flex flex-col justify-center">
+    <span class="absolute -end-full transition-all group-hover:end-4">
       <svg
-        class="download-icon"
-        width="18"
-        height="22"
-        viewBox="0 0 18 22"
-        fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        height="16"
+        width="16"
+        fill="currentColor"
+        viewBox="0 0 512 512"
+        ><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+        <path
+          d="M288 32c0-17.7-14.3-32-32-32s-32 14.3-32 32V274.7l-73.4-73.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l128 128c12.5 12.5 32.8 12.5 45.3 0l128-128c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L288 274.7V32zM64 352c-35.3 0-64 28.7-64 64v32c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V416c0-35.3-28.7-64-64-64H346.5l-45.3 45.3c-25 25-65.5 25-90.5 0L165.5 352H64zm368 56a24 24 0 1 1 0 48 24 24 0 1 1 0-48z"
+        ></path></svg
       >
-        <path
-          class="download-arrow"
-          d="M13 9L9 13M9 13L5 9M9 13V1"
-          stroke="#F2F2F2"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"></path>
-        <path
-          d="M1 17V18C1 18.7956 1.31607 19.5587 1.87868 20.1213C2.44129 20.6839 3.20435 21 4 21H14C14.7956 21 15.5587 20.6839 16.1213 20.1213C16.6839 19.5587 17 18.7956 17 18V17"
-          stroke="#F2F2F2"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"></path>
-      </svg>
-      <div class="download-loader text-white hidden"></div>
-      <!-- Checked Icon -->
-      <svg
-        class="check-svg hidden"
-        width="20"
-        height="20"
-        viewBox="0 0 20 20"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
-          d="M10 20C15.5228 20 20 15.5228 20 10C20 4.47715 15.5228 0 10 0C4.47715 0 0 4.47715 0 10C0 15.5228 4.47715 20 10 20ZM15.1071 7.9071C15.4976 7.51658 15.4976 6.88341 15.1071 6.49289C14.7165 6.10237 14.0834 6.10237 13.6929 6.49289L8.68568 11.5001L7.10707 9.92146C6.71655 9.53094 6.08338 9.53094 5.69286 9.92146C5.30233 10.312 5.30233 10.9452 5.69286 11.3357L7.97857 13.6214C8.3691 14.0119 9.00226 14.0119 9.39279 13.6214L15.1071 7.9071Z"
-          fill="white"></path>
-      </svg>
-    </div>
-    <div class="button-copy pl-2 leading-none uppercase">DOWNLOAD</div>
-  </div>
-</button>
+    </span>
+    <span class="transition-all group-hover:me-4"> Download</span>
+    <div>
+  </button></a
+>
 
-<script>
-  const downloadButton = document.querySelector(`.download-button`);
-  const downloadIcon = document.querySelector(`.download-icon`);
-  const downloadLoader = document.querySelector(`.download-loader`);
-  const downloadCheckMark = document.querySelector(`.check-svg`);
-  const downloadText = document.querySelector(`.button-copy`);
-
-  downloadButton.addEventListener(
-    "click",
-    () => {
-      downloadIcon.classList.add(`hidden`);
-      downloadLoader.classList.remove(`hidden`);
-      downloadText.innerHTML = "DOWNLOADING";
-    },
-    { once: true },
-  );
-
-  downloadLoader.addEventListener("animationend", () => {
-    downloadLoader.classList.add(`hidden`);
-    downloadCheckMark.classList.remove(`hidden`);
-    downloadText.innerHTML = "DOWNLOADED";
-  });
-</script>
-
-<style>
-  body {
-    font-family: "Inter", sans-serif;
-  }
-
-  button:hover {
-    transform: scale(1.01);
-  }
-
-  button:focus {
-    outline: none !important;
-  }
-
-  button:active {
-    transform: scale(0.99);
-  }
-
-  .check-svg {
-    -webkit-animation: svgScale 0.5s ease-in-out;
-    animation: svgScale 0.5s ease-in-out;
-  }
-  .download-arrow {
-    transition: transform 0.2s linear;
-  }
-  button:hover .download-arrow {
-    transform: translate(0, 3px);
-  }
-
-  @-webkit-keyframes svgScale {
-    0% {
-      transform: scale(0);
-    }
-
-    50% {
-      transform: scale(1.2);
-    }
-  }
-
-  @keyframes svgScale {
-    0% {
-      transform: scale(0);
-    }
-
-    50% {
-      transform: scale(1.2);
-    }
-  }
-
-  button.download-button {
-    min-width: 340px;
-    min-height: 68px;
-  }
-  .download-loader {
-    width: 16px;
-    height: 16px;
-    border: 2px solid transparent;
-    border-top-color: #ffffff;
-    border-radius: 50%;
-    opacity: 0;
-    -webkit-animation: button-loading-spinner 1s ease 3;
-    animation: button-loading-spinner 1s ease 3;
-  }
-  @-webkit-keyframes button-loading-spinner {
-    from {
-      transform: rotate(0turn);
-      opacity: 1;
-    }
-
-    to {
-      transform: rotate(1turn);
-      opacity: 0;
-    }
-  }
-  @keyframes button-loading-spinner {
-    from {
-      transform: rotate(0turn);
-      opacity: 1;
-    }
-
-    to {
-      transform: rotate(1turn);
-      opacity: 0;
-    }
-  }
-  .button-copy {
-    padding-top: 2px;
-  }
-  @media (max-width: 375px) {
-    button.copy-button {
-      min-width: 300px;
-    }
-  }
-</style>
