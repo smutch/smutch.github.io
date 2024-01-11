@@ -1,0 +1,69 @@
+---
+import MeraxesData from "../../../layouts/MeraxesData.astro";
+---
+
+<MeraxesData title="Stellar mass fraction" dlUrl="/data/meraxes/Mutch2016-Meraxes_fstar.hdf5">
+</MeraxesData>
+
+<!-- TODO: Replace this total mess of a plot with something more modern!
+           Remember to remove the Plotly scripts etc from the layout too! -->
+<script>
+(function(){
+  Plotly.d3.json("/data/meraxes/fstar.json", function(data) {
+    var lines = [];
+    var nSnaps = _.keys(data).length
+    var colors = chroma.cubehelix()
+    .start(190)
+    .rotations(1.3)
+    .gamma(0.7)
+    .lightness([0.3, 0.8])
+    .scale().correctLightness().colors(nSnaps);
+
+    // sort by redshift
+    var keys = _.keys(data);
+    keys = _.sortBy(keys, function(key){ return Number(key.substr(1)); })
+    window.data = data
+    window.keys = keys
+
+    for (var ii=0; ii<keys.length; ii++) {
+      var key = keys[ii];
+
+      lines.push({
+        x: data[key].mvir,
+        y: data[key].fstar,
+        mode: 'lines',
+        name: 'z=' + Number(key.substr(1)).toFixed(1),
+
+        line: {
+          width: 4,
+          color: colors[ii % colors.length]
+        }
+      })
+    };
+
+    var layout = {
+      hovermode:'closest',
+      margin: {
+        t: 30
+      },
+      yaxis: {
+        type: 'log',
+        exponentformat: 'e',
+        showexponent: 'all',
+        title: 'f<sub>*</sub>'
+      },
+
+      xaxis: {
+        range: [8.5, 12],
+        title: 'log<sub>10</sub>(M<sub>vir</sub>/M<sub>⊙</sub>)'
+      }
+    };
+
+    Plotly.plot(document.getElementById('plot'), lines, layout, {showLink: false});
+  });
+
+  window.onresize = function() {
+    Plotly.Plots.resize(plot);
+  };
+})();
+</script>

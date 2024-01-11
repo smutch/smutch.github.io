@@ -1,75 +1,12 @@
 ---
-import MeraxesLayout from "../../../layouts/Meraxes.astro";
-import DownloadButton from "../../../components/DownloadButton.astro";
+import MeraxesData from "../../../layouts/MeraxesData.astro";
 ---
 
-<MeraxesLayout>
-  <div class="prose mt-16">
-    <h2>Galaxy stellar mass functions</h2>
-    <h3>Fiducial model</h3>
+<MeraxesData title="Galaxy stellar mass functions" dlUrl="/data/meraxes/Mutch2016-Meraxes_SMFs.hdf5">
+</MeraxesData>
 
-    <div class="lg:flex lg:gap-16">
-    <div id="plot"></div>
-
-    <table>
-      <thead>
-        <tr>
-          <th>Parameter</th>
-          <th>Value</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>𝛂<sub>SF</sub></td>
-          <td>0.03</td>
-        </tr>
-        <tr>
-          <td>f<sub>esc</sub></td>
-          <td>0.2</td>
-        </tr>
-        <tr>
-          <td>cosmology</td>
-          <td>Planck 2015</td>
-        </tr>
-        <tr>
-          <td>h</td>
-          <td>0.678</td>
-        </tr>
-        <tr>
-          <td>volume</td>
-          <td>100 Mpc<sup>3</sup></td>
-        </tr>
-      </tbody>
-      <tfoot>
-        <tr>
-          <td colspan="2" style="text-align: right;"
-            >For more info see <a
-              href="http://mnras.oxfordjournals.org/content/462/1/250.abstract"
-              >the paper</a
-            >.</td
-          >
-        </tr>
-      </tfoot>
-    </table>
-    </div>
-    <p>
-      <strong>Note</strong>: Data is provided in HDF5 format with all units and
-      required information provided as attributes.
-    </p>
-    <DownloadButton />
-  </div>
-</MeraxesLayout>
-
-<!-- TODO: Replace this total mess of a plot with something more modern! -->
-<script
-  src="https://cdnjs.cloudflare.com/ajax/libs/chroma-js/2.4.2/chroma.min.js"
-  integrity="sha512-zInFF17qBFVvvvFpIfeBzo7Tj7+rQxLeTJDmbxjBz5/zIr89YVbTNelNhdTT+/DCrxoVzBeUPVFJsczKbB7sew=="
-  crossorigin="anonymous"
-  referrerpolicy="no-referrer"></script>
-<script
-  src="https://cdn.jsdelivr.net/npm/underscore@1.13.6/underscore-umd-min.js"
-></script>
-<script src="https://cdn.plot.ly/plotly-1.2.1.min.js" charset="utf-8"></script>
+<!-- TODO: Replace this total mess of a plot with something more modern!
+           Remember to remove the Plotly scripts etc from the layout too! -->
 <script>
   (function () {
     Plotly.d3.json("/data/meraxes/smf.json", function (data) {

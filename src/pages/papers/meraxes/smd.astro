@@ -1,0 +1,53 @@
+---
+import MeraxesData from "../../../layouts/MeraxesData.astro";
+---
+
+<MeraxesData title="Total stellar mass density" dlUrl="/data/meraxes/Mutch2016-Meraxes_SMD.hdf5">
+</MeraxesData>
+
+<!-- TODO: Replace this total mess of a plot with something more modern!
+           Remember to remove the Plotly scripts etc from the layout too! -->
+<script>
+(function(){
+
+  Plotly.d3.json("/data/meraxes/smd.json", function(data) {
+    var colors = ["#756bb1"];
+
+    var lines = [{
+      x: data.redshift,
+      y: data.smd,
+      mode: 'lines',
+      line: {
+        width: 4,
+        color: colors[0]
+      }
+    }]
+
+    var layout = {
+      hovermode:'closest',
+      margin: {
+        t: 30
+      },
+      yaxis: {
+        type: 'log',
+        exponentformat: 'e',
+        showexponent: 'all',
+        range: [2,8],
+        title: '𝞺<sub>*</sub> [M<sub>⊙</sub> Mpc<sup>-3</sup>]'
+      },
+
+      xaxis: {
+        title: 'redshift',
+        range: [20,5]
+      }
+    };
+
+    var plot = Plotly.plot(document.getElementById('plot'), lines, layout, {showLink: false});
+  });
+
+  window.onresize = function() {
+    Plotly.Plots.resize(plot);
+  };
+
+})();
+</script>

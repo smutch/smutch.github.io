@@ -1,0 +1,63 @@
+---
+import MeraxesData from "../../../layouts/MeraxesData.astro";
+---
+
+<MeraxesData title="Filtering mass">
+  <div slot="description">
+    <div class="prose">
+      <p>
+        The log<sub>10</sub>(M<sub>filt</sub>(z)) relation of the <i>fiducial</i
+        > model is well fit by the following:
+      </p>
+      <div class="lg:flex lg:gap-4 lg:w-max">
+        <div class="mt-8">
+          <p>
+            log<sub>10</sub>(M<sub>filt</sub>(z)/M<sub>θ</sub>) = θ<sub>1</sub> exp(θ<sub
+              >2</sub
+            > z) + θ<sub>3</sub>
+          </p>
+          <p class="leading-loose">
+            where:<br />
+            θ<sub>1</sub> = 7.51431<span class="supsub"
+              ><sup>+0.259995</sup><sub>-0.179941</sub></span
+            ><br />
+            θ<sub>2</sub> = -0.08976<span class="supsub"
+              ><sup>+0.010117</sup><sub>-0.010567</sub></span
+            ><br />
+            θ<sub>3</sub> = 5.58674<span class="supsub"
+              ><sup>+0.346249</sup><sub>-0.425299</sub></span
+            ><br />
+            <br />
+          </p>
+        </div>
+        <img class="my-0" src="/images/meraxes-mfilt-fit.svg" />
+      </div>
+    </div>
+    <div class="lg:grid lg:grid-cols-2 mb-4">
+      <img class="m-0" src="/images/meraxes-mfilt-cov.svg" />
+      <img class="m-0" src="/images/meraxes-mfilt-cor.svg" />
+    </div>
+  </div>
+</MeraxesData>
+
+<style>
+  .supsub {
+    display: inline-block;
+  }
+
+  .supsub sup,
+  .supsub sub {
+    position: relative;
+    display: block;
+    font-size: 0.7em;
+    line-height: 0.4;
+    left: 2px;
+  }
+
+  .supsub sub {
+    top: 0.4em;
+  }
+</style>
+
+<!-- TODO: Replace this total mess of a plot with something more modern!
+           Remember to remove the Plotly scripts etc from the layout too! -->

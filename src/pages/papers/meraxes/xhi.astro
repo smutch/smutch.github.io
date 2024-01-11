@@ -1,0 +1,47 @@
+---
+import MeraxesData from "../../../layouts/MeraxesData.astro";
+---
+
+<MeraxesData title="Volume weighted global neutral fraction" dlUrl="/data/meraxes/Mutch2016-Meraxes_xHI.hdf5">
+</MeraxesData>
+
+<!-- TODO: Replace this total mess of a plot with something more modern!
+           Remember to remove the Plotly scripts etc from the layout too! -->
+<script>
+(function(){
+  Plotly.d3.json("/data/meraxes/xHI.json", function(data) {
+    var colors = ["#756bb1"];
+
+    var lines = [{
+      x: data.redshift,
+      y: data.xHI,
+      mode: 'lines',
+      line: {
+        width: 4,
+        color: colors[0]
+      }
+    }]
+
+    var layout = {
+      hovermode:'closest',
+      margin: {
+        t: 30
+      },
+      yaxis: {
+        title: 'x<sub>HI</sub>'
+      },
+
+      xaxis: {
+        title: 'redshift',
+        range: [20,5]
+      }
+    };
+
+    Plotly.plot(document.getElementById('plot'), lines, layout, {showLink: false});
+  });
+
+  window.onresize = function() {
+    Plotly.Plots.resize(plot);
+  };
+})();
+</script>

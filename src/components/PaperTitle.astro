@@ -34,18 +34,18 @@ const {
     )
   }
 </h4>
-<div class="text-center font-bold mt-2 flex flex-row gap-2">
+<div class="text-center font-bold mt-4 flex flex-row gap-2">
   <a href={journalLink} class="hover:text-indigo-500"
     ><div class="grid grid-cols-1">
-      <i class="ai ai-open-access"></i><span class="text-sm">{journal}</span>
+      <i class="ai ai-open-access ai-3x"></i><span>{journal}</span>
     </div></a
   >
   {
     adsLink && (
       <a href={adsLink} class="hover:text-indigo-500">
         <div class="grid grid-cols-1">
-          <i class="ai ai-ads" />
-          <span class="text-sm">ADS</span>
+          <i class="ai ai-ads ai-3x" />
+          <span>ADS</span>
         </div>
       </a>
     )
@@ -54,8 +54,8 @@ const {
     arxivLink && (
       <a href={arxivLink} class="hover:text-indigo-500">
         <div class="grid grid-cols-1">
-          <i class="ai ai-arxiv" />
-          <span class="text-sm">arXiv</span>
+          <i class="ai ai-arxiv ai-3x" />
+          <span>arXiv</span>
         </div>
       </a>
     )
