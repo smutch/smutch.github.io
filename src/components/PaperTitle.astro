@@ -1,0 +1,63 @@
+---
+const {
+  title,
+  bgImage = false,
+  authors,
+  ref,
+  doi = false,
+  journal,
+  journalLink,
+  adsLink = false,
+  arxivLink = false,
+} = Astro.props;
+---
+
+<h1 class="text-5xl font-black">
+  {
+    bgImage ? (
+      <span
+        class="w-full bg-cover bg-no-repeat bg-clip-text text-transparent overflow-hidden brightness-50"
+        style=`background-image: url('${bgImage}')`
+      >
+        {title}
+      </span>
+    ) : title
+  }
+</h1>
+<h4>
+  <Fragment set:html={authors} /><br />{ref}{
+    doi && (
+      <>
+        <br />
+        <span class="text-sm">{doi}</span>
+      </>
+    )
+  }
+</h4>
+<div class="text-center font-bold mt-2 flex flex-row gap-2">
+  <a href={journalLink} class="hover:text-indigo-500"
+    ><div class="grid grid-cols-1">
+      <i class="ai ai-open-access"></i><span class="text-sm">{journal}</span>
+    </div></a
+  >
+  {
+    adsLink && (
+      <a href={adsLink} class="hover:text-indigo-500">
+        <div class="grid grid-cols-1">
+          <i class="ai ai-ads" />
+          <span class="text-sm">ADS</span>
+        </div>
+      </a>
+    )
+  }
+  {
+    arxivLink && (
+      <a href={arxivLink} class="hover:text-indigo-500">
+        <div class="grid grid-cols-1">
+          <i class="ai ai-arxiv" />
+          <span class="text-sm">arXiv</span>
+        </div>
+      </a>
+    )
+  }
+</div>
