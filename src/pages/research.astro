@@ -3,8 +3,9 @@ import Main from "../layouts/Main.astro";
 import ResearchCard from "../components/ResearchCard.astro";
 import FOMButton from "../components/FOMButton.astro";
 
-import meraxesThumb from "../assets/DRAGONS-composite_EoR-PG.jpg";
-import gnz11Thumb from "../../public/images/thumbs/gnz11.jpg";
+import meraxesThumb from "../assets/DRAGONS_EoR_cube-HRthumb.jpg";
+import mhysaThumb from "../assets/DRAGONS-composite_EoR-PG.jpg";
+import gnz11Thumb from "../assets/gnz11-crop.jpg";
 
 import { getImage } from "astro:assets";
 import bannerRaw from "../assets/banner.jpg";
@@ -72,7 +73,7 @@ const banner = await getImage({ src: bannerRaw });
         <div class="flex gap-8 mx-auto w-full flex-wrap justify-center">
           <ResearchCard
             title="Dark-ages reionization and galaxy formation simulation - XXI. Constraining the evolution of the ionizing escape fraction"
-            image={meraxesThumb}
+            image={mhysaThumb}
           />
 
           <ResearchCard

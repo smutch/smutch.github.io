@@ -1,6 +1,10 @@
 ---
+import { getImage } from "astro:assets";
 import Main from "../layouts/Main.astro";
 import PaperTitle from "../components/PaperTitle.astro";
+import textBgRaw from "../assets/DRAGONS-composite_EoR-PG.jpg";
+
+const textBg = await getImage({ src: textBgRaw });
 
 const { title = "DRAGONS-III" } = Astro.props;
 ---
@@ -11,7 +15,7 @@ const { title = "DRAGONS-III" } = Astro.props;
     <div class="m-8 mt-0 md:mt-8 md:px-16 md:pb-16 max-w-6xl">
       <PaperTitle
         title="Dark-ages reionization and galaxy formation simulation III: Modelling galaxy formation and the Epoch of Reionization"
-        bgImage="/images/DRAGONS-composite_EoR-PG.jpg"
+        bgImage={textBg.src}
         authors="<strong>Simon J. Mutch</strong>, Paul M. Geil, Gregory B. Poole, Paul W. Angel, Alan R. Duffy, Andrei Mesinger, J. Stuart B. Wyithe"
         doi="10.1093/mnras/stw1506"
         ref="2016, MNRAS, Volume 462, Issue 1, p.250-276"
