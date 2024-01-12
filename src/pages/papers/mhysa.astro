@@ -1,0 +1,61 @@
+---
+import { getImage } from "astro:assets";
+import Main from "../../layouts/Main.astro";
+import PaperTitle from "../../components/PaperTitle.astro";
+import textBgRaw from "../../assets/DRAGONS-composite_EoR-PG.jpg";
+
+const textBg = await getImage({ src: textBgRaw });
+---
+
+<!-- TODO: Reduce the size of the image in the header -->
+<Main title="Constraining the escape fraction">
+  <div class="flex justify-center">
+    <div class="m-8 mt-0 md:mt-8 md:px-16 md:pb-16 max-w-6xl">
+      <PaperTitle
+        title="Dark-ages reionization and galaxy formation simulation - XXI. Constraining the evolution of the ionizing escape fraction"
+        bgImage={textBg.src}
+        authors="<strong>Mutch, Simon J.</strong>; Greig, Bradley; Qin, Yuxiang;Poole, Gregory B.; Wyithe, J. Stuart B."
+        doi="10.1093/mnras/stad3746"
+        ref="2024, MNRAS, Volume 527, Issue 3, pp.7924-7939"
+        journal="MNRAS"
+        journalLink="https://academic.oup.com/mnras/article/527/3/7924/7459932"
+        adsLink="https://ui.adsabs.harvard.edu/abs/2024MNRAS.527.7924M/abstract"
+        arxivLink="https://arxiv.org/abs/2303.07378"
+      />
+
+      <div class="prose mt-16 lg:gap-16">
+        <h2>Abstract</h2>
+        <p>
+          The fraction of ionizing photons that escape their host galaxies to
+          ionize hydrogen in the intergalactic medium (IGM) is a critical
+          parameter in analyses of the reionization era. In this paper, we use
+          the MERAXES semi-analytic galaxy formation model to infer the mean
+          ionizing photon escape fraction and its dependence on galaxy
+          properties through joint modelling of the observed high redshift
+          galaxy population and existing constraints on the reionization
+          history. Using a Bayesian framework, and under the assumption that
+          escape fraction is primarily related to halo mass, we find that the
+          joint constraints of the ultraviolet luminosity function, cosmic
+          microwave background optical depth, and the Lyα forest require an
+          escape fraction of (18±5) per cent for galaxies within haloes of M ≲
+          10<sup>9</sup> M<sub>⊙</sub> and (5±2) per cent for more massive haloes.
+          In terms of galaxy properties, this transition in escape fraction occurs
+          at stellar masses of M<sub>*</sub> ~ 10<sup>7</sup> M<sub>⊙</sub>,
+          nearly independent of redshift. As a function of redshift,
+          reionization is dominated by the smaller M<sub>*</sub> ≲ 10<sup>7</sup
+          > M<sub>⊙</sub>
+          galaxies with high escape fractions at z ≳ 6 and by the larger M⋆ ≳ 10<sup
+            >7</sup
+          > M<sub>⊙</sub> galaxies with lower escape fractions at z ≲ 6. Galaxies
+          with star formation rates of 10-2.5 M<sub>⊙</sub>yr<sup>-1</sup> to 10<sup
+            >-1.5</sup
+          > M<sub>⊙</sub>yr<sup>-1</sup> provide the dominant source of ionizing
+          photons throughout reionization. Our results are consistent with recent
+          direct measurements of a ∼5 per cent escape fraction from massive galaxies
+          at the end of reionization and support the picture of low mass galaxies
+          being the dominant sources of ionizing photons during reionization.
+        </p>
+      </div>
+    </div>
+  </div>
+</Main>

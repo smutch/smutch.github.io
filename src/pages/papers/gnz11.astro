@@ -1,0 +1,63 @@
+---
+import { getImage } from "astro:assets";
+import Main from "../../layouts/Main.astro";
+import PaperTitle from "../../components/PaperTitle.astro";
+import textBgRaw from "../../assets/DRAGONS-composite_EoR-PG.jpg";
+
+const textBg = await getImage({ src: textBgRaw });
+
+const { title = "GN-z11 origins" } = Astro.props;
+---
+
+<!-- TODO: Reduce the size of the image in the header -->
+<Main title={title}>
+  <div class="flex justify-center">
+    <div class="m-8 mt-0 md:mt-8 md:px-16 md:pb-16 max-w-6xl">
+      <PaperTitle
+        title="Dark-ages reionization and galaxy-formation simulation - VI. The origins and fate of the highest known redshift galaxy"
+        bgImage={textBg.src}
+        authors="<strong>Mutch, Simon J.</strong>; Liu, Chuanwu; Poole, Gregory B.; Geil, Paul M.; Duffy, Alan R.; Trenti, Michele; Oesch, Pascal A.; Illingworth, Garth D.; Mesinger, Andrei; Wyithe, J. Stuart B."
+        doi="10.1093/mnras/stw2187"
+        ref="2016, MNRAS, Volume 463, Issue 4, p.3556-3562"
+        journal="MNRAS"
+        journalLink="https://academic.oup.com/mnras/article/463/4/3556/2646310"
+        adsLink="https://ui.adsabs.harvard.edu/abs/2016MNRAS.463.3556M/abstract"
+        arxivLink="https://arxiv.org/abs/1605.08054"
+      />
+
+      <div class="prose mt-16 lg:gap-16">
+        <h2>Abstract</h2>
+        <p>
+          Using Hubble data, including new grism spectra, Oesch et al. recently
+          identified GN-z11, an M<sub>UV</sub> = -21.1 galaxy at z = 11.1 (just 400
+          Myr after the big bang). With an estimated stellar mass of ∼10<sup
+            >9</sup
+          > M<sub>⊙</sub>, this galaxy is surprisingly bright and massive,
+          raising questions as to how such an extreme object could form so early
+          in the Universe. Using MERAXES, a semi-analytic galaxy-formation model
+          developed as part of the Dark-ages Reionization And Galaxy-formation
+          Observables from Numerical Simulations (DRAGONS) programme, we
+          investigate the potential formation mechanisms and eventual fate of
+          GN-z11. The volume of our simulation is comparable to that of the
+          discovery observations and possesses two analogue galaxies of similar
+          luminosity to this remarkably bright system. Existing in the two most
+          massive subhaloes at z = 11.1 (M<sub>vir</sub> = 1.4 × 10<sup>11</sup>
+          M<sub>⊙</sub> and 6.7 × 10<sup>10</sup> M<sub>⊙</sub>), our model
+          analogues show excellent agreement with all available observationally
+          derived properties of GN-z11. Although they are relatively rare
+          outliers from the full galaxy population at high-z, they are no longer
+          the most massive or brightest systems by z = 5. Furthermore, we find
+          that both objects possess relatively smooth, but extremely rapid mass
+          growth histories with consistently high star formation rates and UV
+          luminosities at z &gt; 11, indicating that their brightness is not a
+          transient, merger-driven feature. Our model results suggest that
+          future wide-field surveys with the James Webb Space Telescope may be
+          able to detect the progenitors of GN-z11 analogues out to z ∼ 13-14,
+          pushing the frontiers of galaxy-formation observations to the early
+          phases of cosmic reionization and providing a valuable glimpse of the
+          first galaxies to reionize the Universe on large scales.
+        </p>
+      </div>
+    </div>
+  </div>
+</Main>
