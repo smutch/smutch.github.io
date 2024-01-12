@@ -2,6 +2,13 @@
 import Main from "../layouts/Main.astro";
 import ResearchCard from "../components/ResearchCard.astro";
 import FOMButton from "../components/FOMButton.astro";
+
+import meraxesThumb from "../assets/DRAGONS-composite_EoR-PG.jpg";
+import gnz11Thumb from "../../public/images/thumbs/gnz11.jpg";
+
+import { getImage } from "astro:assets";
+import bannerRaw from "../assets/banner.jpg";
+const banner = await getImage({ src: bannerRaw });
 ---
 
 <Main title="Research">
@@ -36,7 +43,7 @@ import FOMButton from "../components/FOMButton.astro";
       <div class="grid grid-cols-2 my-8 min-h-[400px] overflow-hidden">
         <div
           class="w-screen bg-cover bg-no-repeat overflow-hidden"
-          style="background-image: linear-gradient(to right, rgba(255,255,255,0) 10%, rgba(255,255,255,1) 50%), url('images/banner.jpg')"
+          style=`background-image: linear-gradient(to right, rgba(255,255,255,0) 10%, rgba(255,255,255,1) 50%), url('${banner.src}')`
         >
         </div>
         <div class="-ml-12 my-auto">
@@ -65,17 +72,17 @@ import FOMButton from "../components/FOMButton.astro";
         <div class="flex gap-8 mx-auto w-full flex-wrap justify-center">
           <ResearchCard
             title="Dark-ages reionization and galaxy formation simulation - XXI. Constraining the evolution of the ionizing escape fraction"
-            image="images/thumbs/meraxes.jpg"
+            image={meraxesThumb}
           />
 
           <ResearchCard
             title="Dark-ages reionization & galaxy formation simulation VI: The origins and fate of the highest known redshift galaxy"
-            image="images/thumbs/gnz11.jpg"
+            image={gnz11Thumb}
           />
 
           <ResearchCard
             title="Dark-ages reionization and galaxy formation simulation III: Modelling galaxy formation and the Epoch of Reionization"
-            image="images/thumbs/meraxes.jpg"
+            image={meraxesThumb}
             link="papers/meraxes"
           />
         </div>

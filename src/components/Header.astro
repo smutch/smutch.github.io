@@ -1,4 +1,6 @@
 ---
+import { Image } from 'astro:assets';
+import favicon from "../assets/favicon-image.jpg";
 import '../styles/global.css';
 let { height = '80px' } = Astro.props;
 ---
@@ -10,7 +12,7 @@ let { height = '80px' } = Astro.props;
     >
         <div class="flex lg:flex-1">
             <a href="/" class="-m-1.5 flex items-center font-bold text-lg">
-                <img class="h-8 w-auto rounded-full mr-2" src="/favicon.ico" alt="" /> Simon Mutch
+                <Image class="h-8 w-auto rounded-full mr-2" src={favicon} alt="" height=32 width=32 /> Simon Mutch
             </a>
         </div>
         <div class="flex flex-auto gap-x-4 md:gap-x-12 md:px-12 px-4">
