@@ -1,20 +1,22 @@
 ---
+import { Image } from "astro:assets";
 import Main from "../layouts/Main.astro";
 ---
 
 <Main title="DRAGONS media">
   <article class="m-8 md:px-16">
-    <div class="prose">
+    <div class="prose mx-auto text-center">
+      <h1 class="font-black text-6xl">DRAGONS MEDIA</h1>
       <p>
+        All media presented below is licensed under a Creative Commons
+        Attribution-ShareAlike 4.0 International License.
         <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"
           ><img
             alt="Creative Commons License"
-            style="border-width:0"
             src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png"
+            class="mx-auto my-2"
           /></a
         >
-        All media presented below is licensed under a Creative Commons Attribution-ShareAlike
-        4.0 International License.
       </p>
       <p>
         All images and movies were created with the <a href="/papers/meraxes"
@@ -23,61 +25,106 @@ import Main from "../layouts/Main.astro";
           href="https://www.astronomy.swin.edu.au/~gpoole/Tiamat.html">Tiamat</a
         > N-body simulation.
       </p>
-      <div>
-        <h3>EVOLVING REIONISATION CUBE</h3>
+      <div class="my-16">
+        <h2>EVOLVING REIONISATION CUBE</h2>
+        <a href="/movies/DRAGONS-EoR_cube-with_credits.mp4">
+          <Image
+            src="/images/DRAGONS-EoR_cube-with_credits.jpg"
+            alt="Evolving reionisation cube"
+            height="400"
+            width="400"
+            class="my-0 mx-auto"
+          />
+        </a>
         <p>
-            This animation shows the evolution of a simulated patch of the Universe,
-            approximately 325 million light years across. The red shading shows the surface
-            of "bubbles" of ionised hydrogen surrounding the first galaxies. The biggest
-            and brightest of these galaxies are themselves shown as white spheres. (18.3MB)
-            <strong>Credit: Paul Geil & Simon Mutch</strong>
+          This animation shows the evolution of a simulated patch of the
+          Universe, approximately 325 million light years across. The red
+          shading shows the surface of "bubbles" of ionised hydrogen surrounding
+          the first galaxies. The biggest and brightest of these galaxies are
+          themselves shown as white spheres. (18.3MB)<br />
+          <strong>Credit: Paul Geil & Simon Mutch</strong>
         </p>
       </div>
-      <div>
-        <h3>STILL OF REIONISATION CUBE</h3>
+      <div class="my-16">
+        <h2>STILL OF REIONISATION CUBE</h2>
+        <a href="/images/DRAGONS_EoR_cube-HRstill.png">
+          <Image
+            src="/images/DRAGONS_EoR_cube-HRstill.png"
+            alt="Cube still preview"
+            height="400"
+            width="400"
+            class="my-0 mx-auto"
+          />
+        </a>
         <p>
-            A high-res still from the reionisation cube animation. (1MB)
-            <strong>Credit: Paul Geil & Simon Mutch</strong>
+          A high-res still from the reionisation cube animation. (1MB)<br />
+          <strong>Credit: Paul Geil & Simon Mutch</strong>
         </p>
       </div>
-      <div>
-        <h3>COMPOSITE REIONISATION IMAGE</h3>
+      <div class="my-16">
+        <h2>COMPOSITE REIONISATION IMAGE</h2>
+        <a href="/images/DRAGONS-composite_EoR-PG.jpg">
+          <Image
+            src="/images/DRAGONS-composite_EoR-PG.jpg"
+            alt="Composite image"
+            height="400"
+            width="400"
+            class="my-0 mx-auto"
+          />
+        </a>
         <p>
-            This image shows a thin slice of the full simulation during
-            reionisation (~ 326x326 million light years squared). Red regions
-            show the neutral hydrogen gas of the intergalactic medium. The green
-            filamentary structure shows the underlying distribution of mass,
-            forming the "cosmic web". White circles show the positions of the
-            brightest galaxies in the slice, scaled by their stellar mass.
-            (1.1MB; higher resolution version available upon request)
-            <strong>Credit: Paul Geil & Simon Mutch</strong>
+          This image shows a thin slice of the full simulation during
+          reionisation (~ 326x326 million light years squared). Red regions show
+          the neutral hydrogen gas of the intergalactic medium. The green
+          filamentary structure shows the underlying distribution of mass,
+          forming the "cosmic web". White circles show the positions of the
+          brightest galaxies in the slice, scaled by their stellar mass. (1.1MB;
+          higher resolution version available upon request)<br />
+          <strong>Credit: Paul Geil & Simon Mutch</strong>
         </p>
       </div>
-      <div>
-        <h3>LARGE SCALE STRUCTURE</h3>
+      <div class="my-16">
+        <h2>LARGE SCALE STRUCTURE</h2>
+        <a href="/images/DRAGONS-EoR_field-SM.jpg">
+          <Image
+            src="/images/DRAGONS-EoR_field-SM.jpg"
+            alt="LSS image"
+            height="400"
+            width="400"
+            class="my-0 mx-auto"
+          />
+        </a>
         <p>
-            This image shows another thin slice through the full simulation
-            volume (~ 325x325 million light years squared). The large scale
-            distribution of matter is shown in green whilst the distribution of
-            neutral hydrogen is shown in red. (1.7MB)
-            <strong>Credit: Simon Mutch & Paul Geil</strong>
+          This image shows another thin slice through the full simulation volume
+          (~ 325x325 million light years squared). The large scale distribution
+          of matter is shown in green whilst the distribution of neutral
+          hydrogen is shown in red. (1.7MB)<br />
+          <strong>Credit: Simon Mutch & Paul Geil</strong>
         </p>
       </div>
-      <div>
-        <h3>EVOLVING SLICE</h3>
+      <div class="my-16">
+        <h2>EVOLVING SLICE</h2>
+        <a href="/movies/DRAGONS-EoR_evo.mp4">
+          <Image
+            src="/images/DRAGONS-EoR_evo.jpg"
+            alt="Evolving slice image"
+            height="400"
+            width="400"
+            class="my-0 mx-auto"
+          />
+        </a>
         <p>
-            This movie shows the evolution of a thin slice of the full
-            simulation. Blue-green shows the distribution of neutral hydrogen,
-            whilst orange-red regions show ionised hydrogen. The first galaxies
-            form at the intersection of filaments in the cosmic web. As they
-            grow and evolve, they emit more and more high-energy light, which
-            strips electrons off of the neutral hydrogen and causes the ionised
-            bubbles to grow in size. More galaxies also continue to form.
-            Eventually the bubbles all overlap and the universe becomes fully
-            reionised. The plot at the bottom shows the evolution of the
-            volume-averaged global neutral fraction (xʜɪ) as a function of
-            redshift (z). (7MB)
-            <strong>Credit: Simon Mutch & Paul Geil</strong>
+          This movie shows the evolution of a thin slice of the full simulation.
+          Blue-green shows the distribution of neutral hydrogen, whilst
+          orange-red regions show ionised hydrogen. The first galaxies form at
+          the intersection of filaments in the cosmic web. As they grow and
+          evolve, they emit more and more high-energy light, which strips
+          electrons off of the neutral hydrogen and causes the ionised bubbles
+          to grow in size. More galaxies also continue to form. Eventually the
+          bubbles all overlap and the universe becomes fully reionised. The plot
+          at the bottom shows the evolution of the volume-averaged global
+          neutral fraction (xʜɪ) as a function of redshift (z). (7MB)<br />
+          <strong>Credit: Simon Mutch & Paul Geil</strong>
         </p>
       </div>
     </div>
