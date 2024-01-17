@@ -9,7 +9,9 @@ import gnz11Thumb from "../assets/gnz11-crop.jpg";
 
 import { getImage } from "astro:assets";
 import bannerRaw from "../assets/banner.jpg";
+import orthflowLogoRaw from "../assets/orthoflow-banner.svg";
 const banner = await getImage({ src: bannerRaw });
+const orthoflowLogo = await getImage({ src: orthflowLogoRaw });
 ---
 
 <Main title="Research">
@@ -125,39 +127,36 @@ const banner = await getImage({ src: bannerRaw });
       <!-- TODO: wildfires, barwon, biosecurity -->
       <div>
         <div
-          class="w-screen bg-cover bg-no-repeat overflow-hidden"
-          style=`background-image: linear-gradient(to left, rgba(255,255,255,0) 10%, rgba(255,255,255,1) 50%), url('${banner.src}')`
+          class="bg-cover bg-no-repeat overflow-hidden"
+          style=`background-image: linear-gradient(to left, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 75%), url('${orthoflowLogo.src}'); background-position: 20vw 25%;`
         >
           <div class="ml-12 my-auto w-1/2">
             <h1 class="text-2xl font-extrabold">ORTHOFLOW</h1>
             <p class="mb-6">
-              Lorem ipsum dolor sit amet, officia excepteur ex fugiat
-              reprehenderit enim labore culpa sint ad nisi Lorem pariatur mollit
-              ex esse exercitation amet. Nisi anim cupidatat excepteur officia.
-              Reprehenderit nostrud nostrud ipsum Lorem est aliquip amet
-              voluptate voluptate dolor minim nulla est proident. Nostrud
-              officia pariatur ut officia. Sit irure elit esse ea nulla sunt ex
-              occaecat reprehenderit commodo officia dolor Lorem duis laboris
-              cupidatat officia voluptate. Culpa proident adipisicing id nulla
-              nisi laboris ex in Lorem sunt duis officia eiusmod. Aliqua
-              reprehenderit commodo ex non excepteur duis sunt velit enim.
-              Voluptate laboris sint cupidatat ullamco ut ea consectetur et est
-              culpa et culpa duis.
+              Phylogenomics is a powerful tool for evolutionary species tree
+              inference. However, these analyses be complex, involving many
+              interconnected steps which are often difficult to stitch together
+              and maintain. To address this problem, we developed <a
+              href="https://github.com/rbturnbull/orthoflow",
+              class="underline">Orthoflow</a>, a Snakemake based pipeline for
+              end-to-end phylogenomic analysis.
             </p>
-            <p class="mb-2">
-            <i>Orthoflow: phylogenomic analysis and diagnostics with one command</i><br />
-            Robert Turnbull, Jacob L. Steenwyk, <strong>Simon J. Mutch</strong>, Pelle Scholten, Vinícius W. Salazar, Joanne L. Birch, Heroen Verbruggen<br/>
-            Preprint
-            </p>
-            <div class="flex gap-4 flex-nowrap">
-              <FOMButton text="Read the paper" link="https://www.researchsquare.com/article/rs-3699210/v2" />
+            <a href="https://www.researchsquare.com/article/rs-3699210/v2">
+            <div class="bg-slate-400 bg-opacity-5 w-fit rounded-md p-2 tracking-tight">
+              <h4 class="font-bold">Read the paper</h4>
+              <p class="mb-2 font-light">
+              <i>Orthoflow: phylogenomic analysis and diagnostics with one command</i><br />
+              Robert Turnbull, Jacob L. Steenwyk, <b class="font-semibold">Simon J. Mutch</b>, Pelle Scholten, Vinícius W. Salazar, Joanne L. Birch, Heroen Verbruggen<br/>
+              Preprint
+              </p>
             </div>
+            </a>
           </div>
         </div>
       </div>
       <div class="my-8">
         <div
-          class="w-screen bg-cover bg-no-repeat overflow-hidden"
+          class="bg-cover bg-no-repeat overflow-hidden"
           style=`background-image: linear-gradient(to left, rgba(255,255,255,0) 10%, rgba(255,255,255,1) 50%), url('${banner.src}')`
         >
           <div class="ml-12 my-auto w-1/2">
@@ -183,7 +182,7 @@ const banner = await getImage({ src: bannerRaw });
         </div>
       <div class="my-8">
         <div
-          class="w-screen bg-cover bg-no-repeat overflow-hidden"
+          class="bg-cover bg-no-repeat overflow-hidden"
           style=`background-image: linear-gradient(to left, rgba(255,255,255,0) 10%, rgba(255,255,255,1) 50%), url('${banner.src}')`
         >
           <div class="ml-12 my-auto w-1/2">
@@ -207,7 +206,7 @@ const banner = await getImage({ src: bannerRaw });
       </div>
       <div class="my-8">
         <div
-          class="w-screen bg-cover bg-no-repeat overflow-hidden"
+          class="bg-cover bg-no-repeat overflow-hidden"
           style=`background-image: linear-gradient(to left, rgba(255,255,255,0) 10%, rgba(255,255,255,1) 50%), url('${banner.src}')`
         >
           <div class="ml-12 my-auto w-1/2">
