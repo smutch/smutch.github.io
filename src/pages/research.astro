@@ -2,7 +2,7 @@
 import Main from "../layouts/Main.astro";
 import ResearchCard from "../components/ResearchCard.astro";
 import FOMButton from "../components/FOMButton.astro";
-import GithubSquareLogoBare from "../components/logos/GithubSquareLogoBare.astro";
+import GithubSquareLogoBare from "../assets/github-solid.svg";
 
 import meraxesThumb from "../assets/DRAGONS_EoR_cube-HRthumb.jpg";
 import mhysaThumb from "../assets/DRAGONS-composite_EoR-PG.jpg";
@@ -12,9 +12,15 @@ import { getImage } from "astro:assets";
 import bannerRaw from "../assets/banner.jpg";
 import orthflowLogoRaw from "../assets/orthoflow-banner.svg";
 import fileIconRaw from "../assets/file-lines-solid.svg";
+import docsIconRaw from "../assets/book-solid.svg";
+import githubIconRaw from "../assets/github-solid.svg";
+import phytestLogoRaw from "../assets/phytest-logo.png";
 const banner = await getImage({ src: bannerRaw });
 const orthoflowLogo = await getImage({ src: orthflowLogoRaw });
 const fileIcon = await getImage({ src: fileIconRaw });
+const docsIcon = await getImage({ src: docsIconRaw });
+const phytestLogo = await getImage({ src: phytestLogoRaw });
+const GithubIcon = await getImage({ src: githubIconRaw });
 ---
 
 <Main title="Research">
@@ -125,79 +131,94 @@ const fileIcon = await getImage({ src: fileIconRaw });
         >.
       </p>
     </div>
-    <div class="my-32 mx-12">
-      <h1 class="text-6xl font-black text-center mb-8">MULTIDISCIPLINARY</h1>
-      <!-- TODO: wildfires, barwon, biosecurity -->
-      <div>
-        <div
-          class="bg-no-repeat overflow-hidden bg-right"
-          style=`background-image: linear-gradient(to left, rgba(255,255,255,0) 10%, rgba(255,255,255,1) 50%), url('${orthoflowLogo.src}');`
-        >
-          <div class="my-auto w-1/2">
-            <h1 class="text-2xl font-extrabold">ORTHOFLOW</h1>
-            <p class="mb-4">
-              Phylogenomics is a powerful tool for evolutionary species tree
-              inference. However, these analyses be complex, involving many
-              interconnected steps which are often difficult to stitch together
-              and maintain. To address this problem, we developed <a
-                href="https://github.com/rbturnbull/orthoflow"
-                class="underline"><GithubSquareLogoBare />Orthoflow</a
-              >, a Snakemake based pipeline for end-to-end phylogenomic
-              analysis.
-            </p>
-            <a href="https://www.researchsquare.com/article/rs-3699210/v2">
-              <div
-                class="bg-slate-400 bg-opacity-5 w-fit rounded-md p-2 tracking-tight -mx-2 relative"
-              >
-                <img
-                  src={fileIcon.src}
-                  alt="file icon"
-                  class="opacity-[2%] absolute h-[80%] top-[10%] right-2"
-                />
-                <h4 class="font-bold">Read the paper</h4>
-                <p class="font-light">
-                  <i
-                    >Orthoflow: phylogenomic analysis and diagnostics with one
-                    command</i
-                  ><br />
-                  Robert Turnbull, Jacob L. Steenwyk, <b class="font-semibold"
-                    >Simon J. Mutch</b
-                  >, Pelle Scholten, Vinícius W. Salazar, Joanne L. Birch,
-                  Heroen Verbruggen<br />
-                  Preprint
-                </p>
+
+    <div class="mt-32">
+      <div class="my-12 mx-12">
+        <h1 class="text-6xl font-black text-center mb-8">MULTIDISCIPLINARY</h1>
+        <!-- TODO: wildfires, barwon, biosecurity -->
+        <div class="my-12">
+          <div
+            class="bg-no-repeat overflow-hidden bg-right"
+            style=`background-image: linear-gradient(to left, rgba(255,255,255,0) 10%, rgba(255,255,255,1) 50%), url('${orthoflowLogo.src}');`
+          >
+            <div class="my-auto w-1/2">
+              <h1 class="text-2xl font-extrabold">ORTHOFLOW</h1>
+              <p class="mb-4">
+                Phylogenomics is a powerful tool for evolutionary species tree
+                inference. However, these analyses be complex, involving many
+                interconnected steps which are often difficult to stitch
+                together and maintain. To address this problem, we developed, a
+                Snakemake based pipeline for end-to-end phylogenomic analysis.
+              </p>
+              <div class="leading-relaxed tracking-tight">
+                <a
+                  href="https://www.researchsquare.com/article/rs-3699210/v2"
+                  class="flex gap-2 hover:text-indigo-400"
+                >
+                  <img src={fileIcon.src} alt="file icon" />
+                  <h4 class="font-bold">Read the paper →</h4>
+                </a>
+                <a
+                  href="https://rbturnbull.github.io/orthoflow/"
+                  class="flex gap-2 hover:text-indigo-400"
+                >
+                  <img src={docsIcon.src} alt="docs icon" />
+                  <h4 class="font-bold">Read the docs →</h4>
+                </a>
+                <a
+                  href="https://github.com/rbturnbull/orthoflow"
+                  class="flex gap-2 hover:text-indigo-400"
+                >
+                  <img src={GithubIcon.src} alt="docs icon" />
+                  <h4 class="font-bold">Check out the code →</h4>
+                </a>
               </div>
-            </a>
+            </div>
           </div>
         </div>
       </div>
-      <div class="my-8">
+      <div class="my-12">
         <div
-          class="bg-cover bg-no-repeat overflow-hidden"
-          style=`background-image: linear-gradient(to right, rgba(255,255,255,0) 10%, rgba(255,255,255,1) 50%), url('${banner.src}')`
+          class="bg-cover bg-no-repeat overflow-hidden bg-left"
+          style=`background-image: linear-gradient(to right, rgba(255,255,255,0) 10%, rgba(255,255,255,1) 50%), url('${phytestLogo.src}')`
         >
           <div class="my-auto w-1/2 ml-[50%]">
             <h1 class="text-2xl font-extrabold">PHYTEST</h1>
             <p class="mb-6">
-              Lorem ipsum dolor sit amet, officia excepteur ex fugiat
-              reprehenderit enim labore culpa sint ad nisi Lorem pariatur mollit
-              ex esse exercitation amet. Nisi anim cupidatat excepteur officia.
-              Reprehenderit nostrud nostrud ipsum Lorem est aliquip amet
-              voluptate voluptate dolor minim nulla est proident. Nostrud
-              officia pariatur ut officia. Sit irure elit esse ea nulla sunt ex
-              occaecat reprehenderit commodo officia dolor Lorem duis laboris
-              cupidatat officia voluptate. Culpa proident adipisicing id nulla
-              nisi laboris ex in Lorem sunt duis officia eiusmod. Aliqua
-              reprehenderit commodo ex non excepteur duis sunt velit enim.
-              Voluptate laboris sint cupidatat ullamco ut ea consectetur et est
-              culpa et culpa duis.
+              In the era of SARS-CoV-2 and proliferation of real-time
+              phylogenetic pipelines, it is more important than ever to ensure
+              that phylogenetic analyses can be easily verified for correctness.
+              Phytest is a tool for automating quality control checks on
+              sequence, tree and metadata files during phylogenetic analyses. It
+              ensures that phylogenetic analyses meet user-defined quality
+              control tests.
             </p>
-            <div class="flex gap-4 flex-nowrap">
-              <FOMButton text="Read the paper" />
+            <div class="leading-relaxed tracking-tight">
+              <a
+                href="https://academic.oup.com/bioinformatics/article/38/22/5124/6751773?login=true"
+                class="flex gap-2 hover:text-indigo-400"
+              >
+                <img src={fileIcon.src} alt="file icon" />
+                <h4 class="font-bold">Read the paper →</h4>
+              </a>
+              <a
+                href="https://phytest-devs.github.io/phytest/index.html"
+                class="flex gap-2 hover:text-indigo-400"
+              >
+                <img src={docsIcon.src} alt="docs icon" />
+                <h4 class="font-bold">Read the docs →</h4>
+              </a>
+              <a
+                href="https://github.com/phytest-devs/phytest"
+                class="flex gap-2 hover:text-indigo-400"
+              >
+                <img src={GithubIcon.src} alt="docs icon" />
+                <h4 class="font-bold">Check out the code →</h4>
+              </a>
             </div>
           </div>
         </div>
-        <div class="my-8">
+        <div class="my-12">
           <div
             class="bg-cover bg-no-repeat overflow-hidden"
             style=`background-image: linear-gradient(to left, rgba(255,255,255,0) 10%, rgba(255,255,255,1) 50%), url('${banner.src}')`
@@ -221,7 +242,7 @@ const fileIcon = await getImage({ src: fileIconRaw });
             </div>
           </div>
         </div>
-        <div class="my-8">
+        <div class="my-12">
           <div
             class="bg-cover bg-no-repeat overflow-hidden"
             style=`background-image: linear-gradient(to right, rgba(255,255,255,0) 10%, rgba(255,255,255,1) 50%), url('${banner.src}')`
