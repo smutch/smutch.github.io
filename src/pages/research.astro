@@ -34,21 +34,27 @@ const deident = await getImage({ src: deidentRaw });
         my time in Academia.
       </p>
 
+      <ul class="md:flex md:flex-wrap mb-2 md:pl-32 pl-8">
+        <li class="w-1/2 px-2"><strong>Astrophysics</strong><sup>†</sup></li>
+        <li class="w-1/2 px-2">Climate change</li>
+        <li class="w-1/2 px-2">Biosecurity</li>
+        <li class="w-1/2 px-2">Wildfires</li>
+        <li class="w-1/2 px-2">Medical text de-identification</li>
+        <li class="w-1/2 px-2">Phylogenetics</li>
+        <li class="w-1/2 px-2">Hyperspectral imaging</li>
+        <li class="w-1/2 px-2">Eye-tracking</li>
+        <li class="w-1/2 px-2">Computer vision</li>
+        <li class="w-1/2 px-2">... and more!</li>
+      </ul>
+      <span class="text-sm md:pl-32 pl-8"><i>†: My main research area.</i></span
+      >
       <p>
-        <ul class="md:flex md:flex-wrap mb-2 md:pl-32 pl-8">
-          <li class="w-1/2 px-2"><strong>Astrophysics</strong><sup>†</sup></li>
-          <li class="w-1/2 px-2">Climate change</li>
-          <li class="w-1/2 px-2">Biosecurity</li>
-          <li class="w-1/2 px-2">Wildfires</li>
-          <li class="w-1/2 px-2">Medical text de-identification</li>
-          <li class="w-1/2 px-2">Phylogenetics</li>
-          <li class="w-1/2 px-2">Hyperspectral imaging</li>
-          <li class="w-1/2 px-2">Eye-tracking</li>
-          <li class="w-1/2 px-2">... and more!</li>
-        </ul>
-        <span class="text-sm md:pl-32 pl-8"
-          ><i>†: My main research area.</i></span
-        >
+        See below for a selection of my research projects. <b
+          >For a complete listing of my publications (across all domains), see my <a
+            href="https://orcid.org/0000-0002-3166-4614"
+            ><i class="ai ai-orcid"></i> ORCID page</a
+          ></b
+        >.
       </p>
     </div>
 
@@ -136,9 +142,12 @@ const deident = await getImage({ src: deidentRaw });
 
     <div class="mt-32">
       <div class="my-12 mx-12">
-        <h1 class="text-6xl font-black text-center mb-8">MULTIDISCIPLINARY</h1>
+        <h1 class="text-6xl font-black text-center">MULTIDISCIPLINARY</h1>
+        <h3 class="text-3xl font-black text-center mb-14 w-full">
+          HIGHLIGHTED WORKS
+        </h3>
         <!-- TODO: wildfires, barwon, biosecurity -->
-        <div class="my-12">
+        <div class="my-14">
           <div
             class="bg-no-repeat overflow-hidden bg-right"
             style=`background-image: linear-gradient(to left, rgba(255,255,255,0) 10%, rgba(255,255,255,1) 50%), url('${orthoflowLogo.src}');`
@@ -179,7 +188,7 @@ const deident = await getImage({ src: deidentRaw });
           </div>
         </div>
       </div>
-      <div class="my-12">
+      <div class="my-14">
         <div
           class="bg-cover bg-no-repeat overflow-hidden bg-left"
           style=`background-image: linear-gradient(to right, rgba(255,255,255,0) 10%, rgba(255,255,255,1) 50%), url('${phytestLogo.src}')`
@@ -220,37 +229,39 @@ const deident = await getImage({ src: deidentRaw });
             </div>
           </div>
         </div>
-        <div class="my-12">
+        <div class="my-14">
           <div
             class="bg-cover bg-no-repeat overflow-hidden"
             style=`background-image: linear-gradient(to left, rgba(255,255,255,0) 10%, rgba(255,255,255,1) 50%), url('${deident.src}')`
           >
             <div class="my-auto w-1/2">
-              <h1 class="text-2xl font-extrabold">DE-IDENTIFICATION TOOLS FOR GP PATIENT NOTES</h1>
+              <h1 class="text-2xl font-extrabold">
+                DE-IDENTIFICATION TOOLS FOR GP PATIENT NOTES
+              </h1>
               <p class="mb-6">
-                In order for digitized general practice patient notes to be
-                used for research, they must first be de-identified. Doing so
-                in an automated and accurate way poses significant challenges.
-                Whilst a number of open-source tools exist, they are typically
+                In order for digitized general practice patient notes to be used
+                for research, they must first be de-identified. Doing so in an
+                automated and accurate way poses significant challenges. Whilst
+                a number of open-source tools exist, they are typically
                 developed internationally (outside Australia) where variations
                 in conventions, standard record details (such as phone number
-                formating) etc. are different. In this project, we evaluated
-                the performance of four open-source clinical text
-                de-identification tools applied to an Australian setting.
+                formating) etc. are different. In this project, we evaluated the
+                performance of four open-source clinical text de-identification
+                tools applied to an Australian setting.
               </p>
               <div class="leading-relaxed tracking-tight">
-              <a
-                href="https://www.sciencedirect.com/science/article/abs/pii/S1386505623000382"
-                class="flex gap-2 hover:text-indigo-400"
-              >
-                <img src={fileIcon.src} alt="file icon" />
-                <h4 class="font-bold">Read the paper →</h4>
-              </a>
-            </div>
+                <a
+                  href="https://www.sciencedirect.com/science/article/abs/pii/S1386505623000382"
+                  class="flex gap-2 hover:text-indigo-400"
+                >
+                  <img src={fileIcon.src} alt="file icon" />
+                  <h4 class="font-bold">Read the paper →</h4>
+                </a>
+              </div>
             </div>
           </div>
         </div>
-        <div class="my-12">
+        <div class="my-14">
           <div
             class="bg-cover bg-no-repeat overflow-hidden"
             style=`background-image: linear-gradient(to right, rgba(255,255,255,0) 10%, rgba(255,255,255,1) 50%), url('${banner.src}')`
