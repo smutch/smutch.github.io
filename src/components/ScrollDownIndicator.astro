@@ -2,12 +2,11 @@
   x-data="{ scrollOpacity: (window.visualViewport.height >= 800) ? 100.0 : 0.0 }"
 >
   <div
-    class="flex flex-col items-center absolute bottom-0"
-    style="left: calc(50% - 2rem);"
+    class="flex flex-col items-center absolute bottom-0 -mx-8"
     :style="`opacity: ${scrollOpacity}%;`"
     @scroll.window=" \
       if (window.visualViewport.height >= 800) { \
-        y = 100.0 * (1.0 - window.pageYOffset/window.visualViewport.height*2); \
+        y = 100.0 * (1.0 - window.pageYOffset/window.visualViewport.height*4); \
         scrollOpacity = Math.max( 0.0, Math.min(y, 100.0) ); \
       } else { \
       scrollOpacity = 0.0; \
