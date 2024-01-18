@@ -31,9 +31,8 @@ const webIcon = await getImage({ src: webIconRaw });
 
 <Main title="Research">
   <div class="m-8">
-    <div
-      class="tall:h-custom tall:flex tall:flex-col tall:relative items-center justify-center"
-    >
+    <div class="tall:h-custom tall:flex tall:flex-col tall:relative items-center justify-center">
+
       <h1 class="text-6xl font-black text-center mb-6">RESEARCH</h1>
       <div class="prose mx-auto text-sm md:text-lg">
         <p>
@@ -70,14 +69,11 @@ const webIcon = await getImage({ src: webIconRaw });
     </div>
 
     <div class="my-32">
+
       <h2 class="text-5xl font-black text-center mb-6">ASTRONOMY</h2>
       <div class="my-14">
-        <div
-          class="bg-cover bg-no-repeat overflow-hidden -mx-8 px-8 py-4"
-          style=`background-image: linear-gradient(to left, rgba(255,255,255,0.5) 0%, rgba(255,255,255,1) 90%), url('${banner.src}')`
-        >
-          <!-- <div class="md:w-[70%]"> -->
-        <div class="my-auto md:w-[70%] md:max-w-[600px]">
+        <div class="bg-cover bg-no-repeat overflow-hidden -mx-8 px-8 py-4" style=`background-image: linear-gradient(to left, rgba(255,255,255,0.5) 0%, rgba(255,255,255,1) 90%), url('${banner.src}')`>
+          <div class="my-auto md:w-[70%] md:max-w-[600px]">
             <h1 class="text-2xl font-extrabold">DRAGONS</h1>
             <p class="mb-6 tracking-tight">
               THE <b>D</b>ARK-AGES <b>R</b>EIONISATION <b>A</b>ND <b>G</b>ALAXY <b
@@ -98,31 +94,31 @@ const webIcon = await getImage({ src: webIconRaw });
                 link="https://blogs.unimelb.edu.au/stuart-wyithe/#tab56"
               />
               <a href="/dragons-media">
-                <button
-                  class="font-black border-slate-700 border-2 rounded-lg px-2 mb-1 w-fit hover:bg-indigo-200 flex gap-2"
-                  >Media <span aria-hidden="true" class="my-auto"
-                    ><svg
-                      xmlns="http://www.w3.org/2000/svg"
+                <button class="font-black border-slate-700 border-2 rounded-lg px-2 mb-1 w-fit hover:bg-indigo-200 flex gap-2">
+                  Media
+                  <span aria-hidden="true" class="my-auto">
+                    <svg xmlns="http://www.w3.org/2000/svg"
                       height="16"
                       width="20"
                       viewBox="0 0 640 512"
                       ><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
                       <path
-                        d="M256 0H576c35.3 0 64 28.7 64 64V288c0 35.3-28.7 64-64 64H256c-35.3 0-64-28.7-64-64V64c0-35.3 28.7-64 64-64zM476 106.7C471.5 100 464 96 456 96s-15.5 4-20 10.7l-56 84L362.7 169c-4.6-5.7-11.5-9-18.7-9s-14.2 3.3-18.7 9l-64 80c-5.8 7.2-6.9 17.1-2.9 25.4s12.4 13.6 21.6 13.6h80 48H552c8.9 0 17-4.9 21.2-12.7s3.7-17.3-1.2-24.6l-96-144zM336 96a32 32 0 1 0 -64 0 32 32 0 1 0 64 0zM64 128h96V384v32c0 17.7 14.3 32 32 32H320c17.7 0 32-14.3 32-32V384H512v64c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V192c0-35.3 28.7-64 64-64zm8 64c-8.8 0-16 7.2-16 16v16c0 8.8 7.2 16 16 16H88c8.8 0 16-7.2 16-16V208c0-8.8-7.2-16-16-16H72zm0 104c-8.8 0-16 7.2-16 16v16c0 8.8 7.2 16 16 16H88c8.8 0 16-7.2 16-16V312c0-8.8-7.2-16-16-16H72zm0 104c-8.8 0-16 7.2-16 16v16c0 8.8 7.2 16 16 16H88c8.8 0 16-7.2 16-16V416c0-8.8-7.2-16-16-16H72zm336 16v16c0 8.8 7.2 16 16 16h16c8.8 0 16-7.2 16-16V416c0-8.8-7.2-16-16-16H424c-8.8 0-16 7.2-16 16z"
-                      ></path></svg
-                    ></span
-                  ></button
-                >
+                      d="M256 0H576c35.3 0 64 28.7 64 64V288c0 35.3-28.7 64-64 64H256c-35.3 0-64-28.7-64-64V64c0-35.3 28.7-64 64-64zM476 106.7C471.5 100 464 96 456 96s-15.5 4-20 10.7l-56 84L362.7 169c-4.6-5.7-11.5-9-18.7-9s-14.2 3.3-18.7 9l-64 80c-5.8 7.2-6.9 17.1-2.9 25.4s12.4 13.6 21.6 13.6h80 48H552c8.9 0 17-4.9 21.2-12.7s3.7-17.3-1.2-24.6l-96-144zM336 96a32 32 0 1 0 -64 0 32 32 0 1 0 64 0zM64 128h96V384v32c0 17.7 14.3 32 32 32H320c17.7 0 32-14.3 32-32V384H512v64c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V192c0-35.3 28.7-64 64-64zm8 64c-8.8 0-16 7.2-16 16v16c0 8.8 7.2 16 16 16H88c8.8 0 16-7.2 16-16V208c0-8.8-7.2-16-16-16H72zm0 104c-8.8 0-16 7.2-16 16v16c0 8.8 7.2 16 16 16H88c8.8 0 16-7.2 16-16V312c0-8.8-7.2-16-16-16H72zm0 104c-8.8 0-16 7.2-16 16v16c0 8.8 7.2 16 16 16H88c8.8 0 16-7.2 16-16V416c0-8.8-7.2-16-16-16H72zm336 16v16c0 8.8 7.2 16 16 16h16c8.8 0 16-7.2 16-16V416c0-8.8-7.2-16-16-16H424c-8.8 0-16 7.2-16 16z"
+                      ></path>
+                    </svg>
+                  </span>
+                </button>
               </a>
             </div>
           </div>
         </div>
+      </div>
 
-        <h3 class="text-3xl font-black text-center mt-12 mb-6 w-full">
-          HIGHLIGHTED WORKS
-        </h3>
-        <div class="flex mx-8">
-          <div class="flex gap-8 mx-auto w-full flex-wrap justify-center">
+      <h3 class="text-3xl font-black text-center mt-12 mb-6 w-full">
+        HIGHLIGHTED WORKS
+      </h3>
+      <div class="flex mx-8">
+        <div class="flex gap-8 mx-auto w-full flex-wrap justify-center">
             <ResearchCard
               title="Dark-ages reionization and galaxy formation simulation - XXI. Constraining the evolution of the ionizing escape fraction"
               image={mhysaThumb}
@@ -140,38 +136,38 @@ const webIcon = await getImage({ src: webIconRaw });
               image={meraxesThumb}
               link="/papers/meraxes"
             />
-          </div>
         </div>
-        <p
-          class="mt-8 border-2 border-slate-400 w-fit mx-auto p-2 rounded-md bg-slate-100 text-lg"
-        >
-          Find a complete listing of all my astronomy research on my <a
-            href="https://ui.adsabs.harvard.edu/search/q=author%3A%22Mutch%2C%20Simon%20J.%22&sort=date%20desc%2C%20bibcode%20desc&p_=0"
-            class="underline font-bold"><i class="ai ai-ads"></i>ADS page</a
-          >.
-        </p>
       </div>
+      <p
+        class="mt-8 border-2 border-slate-400 w-fit mx-auto p-2 rounded-md bg-slate-100 text-lg"
+      >
+        Find a complete listing of all my astronomy research on my <a
+          href="https://ui.adsabs.harvard.edu/search/q=author%3A%22Mutch%2C%20Simon%20J.%22&sort=date%20desc%2C%20bibcode%20desc&p_=0"
+          class="underline font-bold"><i class="ai ai-ads"></i>ADS page</a
+        >.
+      </p>
 
-      <div class="mt-32 tall:mt-64 my-12">
-        <h1
-          class="text-6xl font-black text-center invisible h-0 md:visible md:h-full"
-        >
-          MULTIDISCIPLINARY
-        </h1>
-        <h1 class="text-5xl font-black text-center md:invisible md:h-0">
-          MULTI- DISCIPLINARY
-        </h1>
-      </div>
+    </div> <!-- END OF ASTRO -->
+
+    <div class="mt-32 tall:mt-64 my-12">
+
+      <h1 class="text-6xl font-black text-center invisible h-0 md:visible md:h-full">
+        MULTIDISCIPLINARY
+      </h1>
+      <h1 class="text-5xl font-black text-center md:invisible md:h-0">
+        MULTI- DISCIPLINARY
+      </h1>
       <h3 class="text-3xl font-black text-center mb-14 w-full">
         HIGHLIGHTED WORKS
       </h3>
-      <!-- TODO: wildfires, barwon, biosecurity -->
+
       <div class="my-14">
         <div
           class="bg-no-repeat bg-cover overflow-hidden bg-top-right -mx-8 px-8 py-4"
           style=`background-image: linear-gradient(to left, rgba(255,255,255,0.9) 10%, rgba(255,255,255,1) 100%), url('${orthoflowLogo.src}');`
         >
           <div class="my-auto md:w-[70%] md:max-w-[600px]">
+
             <h1 class="text-2xl font-extrabold">ORTHOFLOW</h1>
             <p class="mb-4">
               Phylogenomics is a powerful tool for evolutionary species tree
@@ -180,6 +176,7 @@ const webIcon = await getImage({ src: webIconRaw });
               and maintain. To address this problem, we developed, a Snakemake
               based pipeline for end-to-end phylogenomic analysis.
             </p>
+
             <div class="leading-relaxed tracking-tight">
               <a
                 href="https://www.researchsquare.com/article/rs-3699210/v2"
@@ -203,124 +200,139 @@ const webIcon = await getImage({ src: webIconRaw });
                 <h4 class="font-bold">Check out the code →</h4>
               </a>
             </div>
+
           </div>
         </div>
       </div>
+
       <div class="my-14">
         <div
-          class="bg-no-repeat bg-cover overflow-hidden bg-left -mx-8 px
-      </div>
-"
+          class="bg-no-repeat bg-cover overflow-hidden bg-left -mx-8 px-8 py-4"
           style=`background-image: linear-gradient(to right, rgba(255,255,255,0.9) 10%, rgba(255,255,255,1) 100%), url('${phytestLogo.src}')`
         >
-        <div class="my-auto md:w-[70%] md:ml-auto mr-8 md:max-w-[600px]">
-          <h1 class="text-2xl font-extrabold">PHYTEST</h1>
-          <p class="mb-6">
-            In the era of SARS-CoV-2 and proliferation of real-time phylogenetic
-            pipelines, it is more important than ever to ensure that
-            phylogenetic analyses can be easily verified for correctness.
-            Phytest is a tool for automating quality control checks on sequence,
-            tree and metadata files during phylogenetic analyses. It ensures
-            that phylogenetic analyses meet user-defined quality control tests.
-          </p>
-          <div class="leading-relaxed tracking-tight">
-            <a
-              href="https://academic.oup.com/bioinformatics/article/38/22/5124/6751773"
-              class="flex gap-2 hover:text-indigo-400"
-            >
-              <img src={fileIcon.src} alt="file icon" />
-              <h4 class="font-bold">Read the paper →</h4>
-            </a>
-            <a
-              href="https://phytest-devs.github.io/phytest/index.html"
-              class="flex gap-2 hover:text-indigo-400"
-            >
-              <img src={docsIcon.src} alt="docs icon" />
-              <h4 class="font-bold">Read the docs →</h4>
-            </a>
-            <a
-              href="https://github.com/phytest-devs/phytest"
-              class="flex gap-2 hover:text-indigo-400"
-            >
-              <img src={githubIcon.src} alt="docs icon" />
-              <h4 class="font-bold">Check out the code →</h4>
-            </a>
+          <div class="my-auto md:w-[70%] md:ml-auto md:max-w-[600px] text-right md:text-left">
+
+            <h1 class="text-2xl font-extrabold">PHYTEST</h1>
+            <p class="mb-6">
+              In the era of SARS-CoV-2 and proliferation of real-time phylogenetic
+              pipelines, it is more important than ever to ensure that
+              phylogenetic analyses can be easily verified for correctness.
+              Phytest is a tool for automating quality control checks on sequence,
+              tree and metadata files during phylogenetic analyses. It ensures
+              that phylogenetic analyses meet user-defined quality control tests.
+            </p>
+
+            <div class="leading-relaxed tracking-tight">
+              <a
+                href="https://academic.oup.com/bioinformatics/article/38/22/5124/6751773"
+                class="flex gap-2 hover:text-indigo-400 w-fit ml-auto md:w-auto md:ml-0"
+              >
+                <img src={fileIcon.src} alt="file icon" />
+                <h4 class="font-bold">Read the paper →</h4>
+              </a>
+              <a
+                href="https://phytest-devs.github.io/phytest/index.html"
+                class="flex gap-2 hover:text-indigo-400 w-fit ml-auto md:w-auto md:ml-0"
+              >
+                <img src={docsIcon.src} alt="docs icon" />
+                <h4 class="font-bold">Read the docs →</h4>
+              </a>
+              <a
+                href="https://github.com/phytest-devs/phytest"
+                class="flex gap-2 hover:text-indigo-400 w-fit ml-auto md:w-auto md:ml-0"
+              >
+                <img src={githubIcon.src} alt="docs icon" />
+                <h4 class="font-bold">Check out the code →</h4>
+              </a>
+            </div>
+
           </div>
         </div>
       </div>
+
       <div class="my-14">
         <div
-          class="bg-cover bg-no-repeat overflow-hidden py-4"
+          class="bg-cover bg-no-repeat overflow-hidden py-4 -mx-8 px-8"
           style=`background-image: linear-gradient(to left, rgba(255,255,255,0.8) 10%, rgba(255,255,255,1) 80%), url('${deident.src}')`
         >
-        <div class="my-auto md:w-[70%] md:max-w-[600px]">
-          <h1 class="text-2xl font-extrabold">
-            DE-IDENTIFICATION TOOLS FOR GP PATIENT NOTES
-          </h1>
-          <p class="mb-6">
-            In order for digitized general practice patient notes to be used for
-            research, they must first be de-identified. Doing so in an automated
-            and accurate way poses significant challenges. Whilst a number of
-            open-source tools exist, they are typically developed
-            internationally (outside Australia) where variations in conventions,
-            standard record details (such as phone number formating) etc. are
-            different. In this project, we evaluated the performance of four
-            open-source clinical text de-identification tools applied to an
-            Australian setting.
-          </p>
-          <div class="leading-relaxed tracking-tight">
-            <a
-              href="https://www.sciencedirect.com/science/article/abs/pii/S1386505623000382"
-              class="flex gap-2 hover:text-indigo-400"
-            >
-              <img src={fileIcon.src} alt="file icon" />
-              <h4 class="font-bold">Read the paper →</h4>
-            </a>
+          <div class="my-auto md:w-[70%] md:max-w-[600px]">
+
+            <h1 class="text-2xl font-extrabold">
+              DE-IDENTIFICATION TOOLS FOR GP PATIENT NOTES
+            </h1>
+            <p class="mb-6">
+              In order for digitized general practice patient notes to be used
+              for research, they must first be de-identified. Doing so in an
+              automated and accurate way poses significant challenges. Whilst a
+              number of open-source tools exist, they are typically developed
+              internationally (outside Australia) where variations in
+              conventions, standard record details (such as phone number
+              formating) etc. are different. In this project, we evaluated the
+              performance of four open-source clinical text de-identification
+              tools applied to an Australian setting.
+            </p>
+            <div class="leading-relaxed tracking-tight">
+              <a
+                href="https://www.sciencedirect.com/science/article/abs/pii/S1386505623000382"
+                class="flex gap-2 hover:text-indigo-400"
+              >
+                <img src={fileIcon.src} alt="file icon" />
+                <h4 class="font-bold">Read the paper →</h4>
+              </a>
+            </div>
+   
           </div>
         </div>
-      </div>
-      </div>
+      </div> 
+
       <div class="my-14">
         <div
-          class="bg-cover bg-no-repeat overflow-hidden bg-center py-4"
+          class="bg-cover bg-no-repeat overflow-hidden bg-center py-4 -mx-8 px-8"
           style=`background-image: linear-gradient(to right, rgba(255,255,255,0.8) 10%, rgba(255,255,255,1) 80%), url('${planet.src}')`
         >
-        <div class="my-auto md:w-[70%] md:ml-auto mr-8 md:max-w-[600px]">
-          <h1 class="text-2xl font-extrabold">
-            AGGREGATED AND PREPROCESSED CMIP-CLIMATE DATA
-          </h1>
-          <p class="mb-6">
-            The Sixth Coupled Model Intercomparison Project (CMIP6) comprises a
-            huge collection of simulated climate experiments and is forecast to
-            produce in the order of 20PB of data. In order to utilise the output
-            of these complex simulations for reduced complexity models, the data
-            must be preprocessed and homogenised, requiring significant domain
-            and 'big-data' expertise. In this work we created a dataset of
-            stitched and de-drifted annual, monthly, global, hemispheric and
-            land/ocean mean values derived from a selection of CMIP6
-            experiments. The resulting dataset is presented via <a
-              href="https://cmip6.science.unimelb.edu.au/"
-              class="underline">a website</a
-            > with accompanying API, for use by the community.
-          </p>
-          <div class="leading-relaxed tracking-tight">
-            <a
-              href="https://rmets.onlinelibrary.wiley.com/doi/10.1002/gdj3.113"
-              class="flex gap-2 hover:text-indigo-400"
-            >
-              <img src={fileIcon.src} alt="file icon" />
-              <h4 class="font-bold">Read the paper →</h4>
-            </a>
-            <a
-              href="https://cmip6.science.unimelb.edu.au/"
-              class="flex gap-2 hover:text-indigo-400"
-            >
-              <img src={webIcon.src} alt="file icon" />
-              <h4 class="font-bold">Explore the data →</h4>
-            </a>
+          <div class="my-auto md:w-[70%] md:ml-auto mr-8 md:max-w-[600px]">
+
+            <h1 class="text-2xl font-extrabold">
+              AGGREGATED AND PREPROCESSED CMIP-CLIMATE DATA
+            </h1>
+            <p class="mb-6">
+              The Sixth Coupled Model Intercomparison Project (CMIP6) comprises
+              a huge collection of simulated climate experiments and is forecast
+              to produce in the order of 20PB of data. In order to utilise the
+              output of these complex simulations for reduced complexity models,
+              the data must be preprocessed and homogenised, requiring
+              significant domain and 'big-data' expertise. In this work we
+              created a dataset of stitched and de-drifted annual, monthly,
+              global, hemispheric and land/ocean mean values derived from a
+              selection of CMIP6 experiments. The resulting dataset is presented
+              via <a
+                href="https://cmip6.science.unimelb.edu.au/"
+                class="underline">a website</a
+              > with accompanying API, for use by the community.
+            </p>
+
+            <div class="leading-relaxed tracking-tight">
+              <a
+                href="https://rmets.onlinelibrary.wiley.com/doi/10.1002/gdj3.113"
+                class="flex gap-2 hover:text-indigo-400"
+              >
+                <img src={fileIcon.src} alt="file icon" />
+                <h4 class="font-bold">Read the paper →</h4>
+              </a>
+              <a
+                href="https://cmip6.science.unimelb.edu.au/"
+                class="flex gap-2 hover:text-indigo-400"
+              >
+                <img src={webIcon.src} alt="file icon" />
+                <h4 class="font-bold">Explore the data →</h4>
+              </a>
+            </div>
+
           </div>
         </div>
       </div>
-    </div>
+
+    </div> <!-- END OF MULTIDISCIPLINARY -->
+
   </div>
 </Main>
