@@ -10,6 +10,9 @@ module.exports = {
 			height: {
 				custom: 'calc(100vh - var(--header-height))',
 			},
+			screens: {
+        'tall': { 'raw': '(min-height: 800px)' },
+      }
 		},
 	},
 	plugins: [require('@tailwindcss/typography'),],

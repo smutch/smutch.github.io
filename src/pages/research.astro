@@ -2,7 +2,7 @@
 import Main from "../layouts/Main.astro";
 import ResearchCard from "../components/ResearchCard.astro";
 import FOMButton from "../components/FOMButton.astro";
-import GithubSquareLogoBare from "../assets/github-solid.svg";
+import ScrollDownIndicator from "../components/ScrollDownIndicator.astro";
 
 import meraxesThumb from "../assets/DRAGONS_EoR_cube-HRthumb.jpg";
 import mhysaThumb from "../assets/DRAGONS-composite_EoR-PG.jpg";
@@ -27,36 +27,40 @@ const deident = await getImage({ src: deidentRaw });
 
 <Main title="Research">
   <div class="m-8">
-    <h1 class="text-6xl font-black text-center mb-6">RESEARCH</h1>
-    <div class="prose mx-auto">
-      <p>
-        I've had the opportunity to work on a wide range of research topics over
-        my time in Academia.
-      </p>
+    <div class="tall:h-custom tall:flex tall:flex-col tall:relative items-center justify-center">
+      <h1 class="text-6xl font-black text-center mb-6">RESEARCH</h1>
+      <div class="prose mx-auto">
+        <p>
+          I've had the opportunity to work on a wide range of research topics
+          over my time in Academia.
+        </p>
 
-      <ul class="md:flex md:flex-wrap mb-2 md:pl-32 pl-8">
-        <li class="w-1/2 px-2"><strong>Astrophysics</strong><sup>†</sup></li>
-        <li class="w-1/2 px-2">Climate change</li>
-        <li class="w-1/2 px-2">Biosecurity</li>
-        <li class="w-1/2 px-2">Wildfires</li>
-        <li class="w-1/2 px-2">Medical text de-identification</li>
-        <li class="w-1/2 px-2">Phylogenetics</li>
-        <li class="w-1/2 px-2">Hyperspectral imaging</li>
-        <li class="w-1/2 px-2">Eye-tracking</li>
-        <li class="w-1/2 px-2">Computer vision</li>
-        <li class="w-1/2 px-2">... and more!</li>
-      </ul>
-      <span class="text-sm md:pl-32 pl-8"><i>†: My main research area.</i></span
-      >
-      <p>
-        See below for a selection of my research projects. <b
-          >For a complete listing of my publications (across all domains), see my <a
+        <ul class="md:flex md:flex-wrap mb-2 md:pl-32 pl-8">
+          <li class="w-1/2 px-2"><strong>Astrophysics</strong><sup>†</sup></li>
+          <li class="w-1/2 px-2">Climate change</li>
+          <li class="w-1/2 px-2">Biosecurity</li>
+          <li class="w-1/2 px-2">Wildfires</li>
+          <li class="w-1/2 px-2">Medical text de-identification</li>
+          <li class="w-1/2 px-2">Phylogenetics</li>
+          <li class="w-1/2 px-2">Hyperspectral imaging</li>
+          <li class="w-1/2 px-2">Eye-tracking</li>
+          <li class="w-1/2 px-2">Computer vision</li>
+          <li class="w-1/2 px-2">... and more!</li>
+        </ul>
+        <span class="text-sm md:pl-32 pl-8"
+          ><i>†: My main research area.</i></span
+        >
+        <p>
+          See below for a selection of my research projects. For a complete
+          listing of my publications (across all domains), see my <a
             href="https://orcid.org/0000-0002-3166-4614"
             ><i class="ai ai-orcid"></i> ORCID page</a
-          ></b
-        >.
-      </p>
+          >.
+        </p>
+      </div>
+      <ScrollDownIndicator />
     </div>
+
 
     <div class="my-32">
       <h2 class="text-5xl font-black text-center mb-6">ASTRONOMY</h2>
