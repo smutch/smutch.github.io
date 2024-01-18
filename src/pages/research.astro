@@ -75,7 +75,7 @@ const webIcon = await getImage({ src: webIconRaw });
           style=`background-image: linear-gradient(to right, rgba(255,255,255,0) 10%, rgba(255,255,255,1) 50%), url('${banner.src}')`
         >
         </div>
-        <div class="-ml-12 my-auto">
+        <div class="-ml-12 py-8">
           <h1 class="text-2xl font-extrabold">DRAGONS</h1>
           <p class="mb-6 tracking-tight">
             THE <b>D</b>ARK-AGES <b>R</b>EIONISATION <b>A</b>ND <b>G</b>ALAXY <b
@@ -123,19 +123,19 @@ const webIcon = await getImage({ src: webIconRaw });
           <ResearchCard
             title="Dark-ages reionization and galaxy formation simulation - XXI. Constraining the evolution of the ionizing escape fraction"
             image={mhysaThumb}
-            link="papers/mhysa"
+            link="/papers/mhysa"
           />
 
           <ResearchCard
             title="Dark-ages reionization & galaxy formation simulation VI: The origins and fate of the highest known redshift galaxy"
             image={gnz11Thumb}
-            link="papers/gnz11"
+            link="/papers/gnz11"
           />
 
           <ResearchCard
             title="Dark-ages reionization and galaxy formation simulation III: Modelling galaxy formation and the Epoch of Reionization"
             image={meraxesThumb}
-            link="papers/meraxes"
+            link="/papers/meraxes"
           />
         </div>
       </div>
@@ -150,8 +150,9 @@ const webIcon = await getImage({ src: webIconRaw });
     </div>
 
     <div class="mt-32 tall:mt-64">
-      <div class="my-12 mx-12">
-        <h1 class="text-6xl font-black text-center">MULTIDISCIPLINARY</h1>
+      <div class="my-12">
+        <h1 class="text-6xl font-black text-center invisible h-0 md:visible md:h-full">MULTIDISCIPLINARY</h1>
+        <h1 class="text-5xl font-black text-center md:invisible md:h-0">MULTI-</br \>DISCIPLINARY</h1>
         <h3 class="text-3xl font-black text-center mb-14 w-full">
           HIGHLIGHTED WORKS
         </h3>
