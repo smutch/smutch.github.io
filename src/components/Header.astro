@@ -11,18 +11,20 @@ let { height = '80px' } = Astro.props;
         aria-label="Global"
     >
         <div class="flex lg:flex-1">
-            <a href="/" class="-m-1.5 flex items-center font-bold text-lg">
+            <a href="/" class="-m-1.5 flex items-center font-bold text-lg leading-tight">
                 <Image class="h-8 w-auto rounded-full mr-2" src={favicon} alt="" height=32 width=32 /> Simon Mutch
             </a>
         </div>
-        <div class="flex flex-auto gap-x-4 md:gap-x-12 md:px-12 px-4 justify-center">
-            <a href="/about" class="text-sm font-semibold leading-6 text-gray-900"
+        <div class="flex md:gap-x-4 gap-x-2 px-4 justify-center">
+            <a href="/about" class="text-sm font-semibold leading-6 text-gray-900 hover:text-indigo-600"
                 >About</a
             >
-            <a href="/research" class="text-sm font-semibold leading-6 text-gray-900"
+            |
+            <a href="/research" class="text-sm font-semibold leading-6 text-gray-900 hover:text-indigo-600"
                 >Research</a
             >
-            <a href="/blog" class="text-sm font-semibold leading-6 text-gray-900"
+            |
+            <a href="/blog" class="text-sm font-semibold leading-6 text-gray-900 hover:text-indigo-600"
                 >Blog</a
             >
         </div>
